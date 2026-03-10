@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --font-title: 'Playfair display';
+    --font-body: 'DM Sans';
+    --color-bg-warm: #f9f6f1;
+}
+
+.input_nav,
+.p_work,
+.description,
+.collab,
+button, li a {
+    font-family: var(--font-body);
+}
+
+.h1_hero {
+    font-family: var(--font-title);
+}
+
+.heroSpanName {
+    font-style: italic;
+}
+
+body {
+    background-color: var(--color-bg-warm);
+}
