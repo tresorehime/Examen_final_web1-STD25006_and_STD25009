@@ -14,15 +14,15 @@
 </head>
 
 <body class="overflow-x-hidden">
-    <header class="flex justify-center items-center gap-80 bg-[#991b1b]">
+    <header class="flex justify-center items-center gap-80 bg-[#991b1b] navbar">
         <img src="logo.png" alt="" class="w-52">
         <nav>
             <ul class="flex justify-center items-center gap-6 text-white">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="#">BLOG</a></li>
-                <li><a href="#">COURSES</a></li>
-                <li><a href="#">TESTIMONIALS</a></li>
-                <li><a href="#">RESEARCH</a></li>
+                <li><a href="index.html" class="nav_link">HOME</a></li>
+                <li><a href="#" class="nav_link">BLOG</a></li>
+                <li><a href="#" class="nav_link">COURSES</a></li>
+                <li><a href="#" class="nav_link">TESTIMONIALS</a></li>
+                <li><a href="#" class="nav_link">RESEARCH</a></li>
             </ul>
         </nav>
         <div>
@@ -32,13 +32,14 @@
         </div>
     </header>
     <main>
-        <section class="hero flex items-center mt-[8rem] gap-20 ml-[15rem]">
+        <section class="hero flex items-center pt-[13rem] gap-20 ml-[15rem]">
             <div>
                 <div>
                     <span class="text-red-800 flex items-center text-sm gap-3 mb-4 font-semibold">
                         <hr class="w-8 border-t-2 border-red-800 ">PORTFOLIO & SERVICES
                     </span>
-                    <h1 class="text-6xl h1_hero w-[300px]">Tokimahery <span class="text-red-800 heroSpanName">Ramarozaka</span>
+                    <h1 class="text-6xl h1_hero w-[300px]">Tokimahery <span
+                            class="text-red-800 heroSpanName">Ramarozaka</span>
                     </h1>
                     <p class="text-gray-500 p_work text-sm mt-6 mb-6">CONSULTANT - TEACHER - DEVELOPER - TRANSLATOR -
                         PHD
@@ -51,7 +52,7 @@
                 <div class="hero_button flex gap-6 mt-7">
                     <button class="text-white bg-[#b91c1c] py-3 px-6 rounded-lg border-red-900 border-2"><a
                             href="#">Book a course</a></button>
-                    <button class="bg-[#ffffff] py-3 px-6 rounded-lg border-2 border-gray-200"><a href="#">About
+                    <button class="bg-[#ffffff] py-3 px-6 rounded-lg border-2 border-gray-200"><a href="#about_me">About
                             me</a></button>
                 </div>
                 <div class="mt-7">
@@ -72,23 +73,41 @@
             </div>
             </div>
             <div class="relative">
-                    <div class=" absolute -top-[22rem] left-[20rem] h-72 w-72 rounded-full border-2 border-gray-200/20 flex justify-center items-center">
-                        <div class="h-36 w-36 rounded-full border-2 border-gray-200/20">
-                        </div>
+                <div
+                    class=" absolute -top-[22rem] left-[20rem] h-72 w-72 rounded-full border-2 border-gray-200/20 flex justify-center items-center">
+                    <div class="h-36 w-36 rounded-full border-2 border-gray-200/20">
                     </div>
                 </div>
-                <div class="relative">
-                    <div class="absolute -top-2 left-7 w-72 h-72 rounded-full  bg-red-200/40 z-0"></div>
-                    <div class="absolute -bottom-1 -right-1 w-72 h-72 rounded-full  bg-red-200/30"></div>
-                    <img src="square-image.jpg" alt=""
-                        class="relative w-80 h-80 rounded-full object-cover border-2 border-red-800/60 p-2 z-10">
+            </div>
+            <div class="relative">
+                <div class="absolute -top-2 left-7 w-72 h-72 rounded-full  bg-red-200/40 z-0"></div>
+                <div class="absolute -bottom-1 -right-1 w-72 h-72 rounded-full  bg-red-200/30"></div>
+                <img src="square-image.jpg" alt=""
+                    class="relative w-80 h-80 rounded-full object-cover border-2 border-red-800/60 p-2 z-9">
 
-                </div>
+            </div>
 
             </div>
         </section>
+        <section  class="about bg-white mt-[7rem] flex justify-center items-center gap-[15rem] pt-[5rem] pb-[5rem]">
+            <div>
+                <span class="text-gray-500 flex items-center gap-4 text-sm">
+                    <hr class="w-8 border-t-2 border-red-800 ">WHO I AM
+                </span>
+                <h1 class="h1_about text-6xl h1_hero w-[30px] mt-5">
+                    About <span class="about_span_me">me</span>
+                </h1>
+            </div>
+            <div id="about_me" class="w-[700px] about_text ">
+                <div class="abt_part_one text-gray-600 "></div>
+                <div class="abt_part_two  text-gray-600 mt-[2rem] border-b-2 pb-3"></div>
+                <div class="flex  items-center gap-10 overview mt-7">
+                </div>
+            </div>
+        </section>
     </main>
-
+    <script src="tokimahery.data.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
