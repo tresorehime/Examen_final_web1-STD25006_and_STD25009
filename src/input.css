@@ -7,7 +7,8 @@
     --font-body: 'DM Sans';
     --color-bg-warm: #f9f6f1;
 }
-.navbar{
+
+.navbar {
     position: fixed;
     width: 100%;
     z-index: 10;
@@ -17,40 +18,55 @@
 .p_work,
 .description,
 .collab,
-button, li a, .about_text, .labelOverview{
+button,
+li a,
+.about_text,
+.labelOverview,
+.h4_courses,
+.courses_view, .learning_title, .backgound_exp, .who {
     font-family: var(--font-body);
 }
 
-.h1_hero, .h1_about, .numberOverview {
+.h1_hero,
+.h1_about,
+.numberOverview,
+.h1_learning text,
+.p_courses {
     font-family: var(--font-title);
 }
 
-.heroSpanName, .about_span_me {
+.heroSpanName,
+.about_span_me,
+.span_learning {
     font-style: italic;
 }
+
 .nav_link {
-  position: relative;
-  padding-bottom: 4px;
+    position: relative;
+    padding-bottom: 4px;
 }
 
 .nav_link::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 2px;
-  background: white;
-  transition: width 0.3s ease;
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease;
 }
 
 .nav_link:hover::after {
-  width: 100%;
+    width: 100%;
 }
+
 body {
     background-color: var(--color-bg-warm);
 }
-body,html{
+
+body,
+html {
     scroll-behavior: smooth;
 }

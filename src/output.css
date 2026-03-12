@@ -590,10 +590,6 @@ video {
   z-index: 0;
 }
 
-.z-10 {
-  z-index: 10;
-}
-
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -626,28 +622,64 @@ video {
   margin-top: 2rem;
 }
 
+.mt-9 {
+  margin-top: 2.25rem;
+}
+
 .mt-\[2rem\] {
   margin-top: 2rem;
+}
+
+.mt-\[3rem\] {
+  margin-top: 3rem;
 }
 
 .mt-\[4rem\] {
   margin-top: 4rem;
 }
 
-.mt-\[5rem\] {
-  margin-top: 5rem;
-}
-
-.mt-\[10rem\] {
-  margin-top: 10rem;
-}
-
-.mt-\[rem\] {
-  margin-top: rem;
+.mt-\[6rem\] {
+  margin-top: 6rem;
 }
 
 .mt-\[7rem\] {
   margin-top: 7rem;
+}
+
+.ml-5 {
+  margin-left: 1.25rem;
+}
+
+.ml-\[\] {
+  margin-left: ;
+}
+
+.ml-\[4rem\] {
+  margin-left: 4rem;
+}
+
+.ml-\[rem\] {
+  margin-left: rem;
+}
+
+.ml-\[8rem\] {
+  margin-left: 8rem;
+}
+
+.ml-\[7rem\] {
+  margin-left: 7rem;
+}
+
+.ml-\[6rem\] {
+  margin-left: 6rem;
+}
+
+.ml-\[6\.rem\] {
+  margin-left: 6.rem;
+}
+
+.ml-\[6\.5rem\] {
+  margin-left: 6.5rem;
 }
 
 .flex {
@@ -706,12 +738,33 @@ video {
   width: 700px;
 }
 
+.w-\[9\.3rem\] {
+  width: 9.3rem;
+}
+
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
 .items-center {
   align-items: center;
 }
 
 .justify-center {
   justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
 }
 
 .gap-10 {
@@ -738,6 +791,10 @@ video {
   gap: 20rem;
 }
 
+.gap-9 {
+  gap: 2.25rem;
+}
+
 .gap-\[15rem\] {
   gap: 15rem;
 }
@@ -746,12 +803,20 @@ video {
   overflow-x: hidden;
 }
 
+.rounded-3xl {
+  border-radius: 1.5rem;
+}
+
 .rounded-full {
   border-radius: 9999px;
 }
 
 .rounded-lg {
   border-radius: 0.5rem;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
 }
 
 .border-2 {
@@ -789,6 +854,16 @@ video {
   border-color: rgb(127 29 29 / var(--tw-border-opacity, 1));
 }
 
+.bg-\[\#1f2937\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#4b5563\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(75 85 99 / var(--tw-bg-opacity, 1));
+}
+
 .bg-\[\#991b1b\] {
   --tw-bg-opacity: 1;
   background-color: rgb(153 27 27 / var(--tw-bg-opacity, 1));
@@ -817,6 +892,12 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
+.from-neutral-950 {
+  --tw-gradient-from: #0a0a0a var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(10 10 10 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -826,9 +907,23 @@ video {
   padding: 0.5rem;
 }
 
+.p-6 {
+  padding: 1.5rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .py-3 {
@@ -840,56 +935,28 @@ video {
   padding-bottom: 0.75rem;
 }
 
-.pb-4 {
-  padding-bottom: 1rem;
+.pb-\[5rem\] {
+  padding-bottom: 5rem;
 }
 
-.pt-4 {
-  padding-top: 1rem;
-}
-
-.pt-\[\] {
-  padding-top: ;
-}
-
-.pt-\[8rem\] {
-  padding-top: 8rem;
-}
-
-.pt-\[10rem\] {
-  padding-top: 10rem;
-}
-
-.pt-\[1rem\] {
-  padding-top: 1rem;
-}
-
-.pt-\[14rem\] {
-  padding-top: 14rem;
+.pt-3 {
+  padding-top: 0.75rem;
 }
 
 .pt-\[13rem\] {
   padding-top: 13rem;
 }
 
-.pt-\[4rem\] {
-  padding-top: 4rem;
-}
-
-.pb-\[\] {
-  padding-bottom: ;
-}
-
-.pb-\[4rem\] {
-  padding-bottom: 4rem;
-}
-
 .pt-\[5rem\] {
   padding-top: 5rem;
 }
 
-.pb-\[5rem\] {
-  padding-bottom: 5rem;
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .text-2xl {
@@ -906,6 +973,11 @@ video {
   font-size: 0.7rem;
 }
 
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -914,6 +986,10 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.font-bold {
+  font-weight: 700;
 }
 
 .font-semibold {
@@ -966,7 +1042,7 @@ video {
   --color-bg-warm: #f9f6f1;
 }
 
-.navbar{
+.navbar {
   position: fixed;
   width: 100%;
   z-index: 10;
@@ -976,15 +1052,26 @@ video {
 .p_work,
 .description,
 .collab,
-button, li a, .about_text, .labelOverview{
+button,
+li a,
+.about_text,
+.labelOverview,
+.h4_courses,
+.courses_view, .learning_title, .backgound_exp, .who {
   font-family: var(--font-body);
 }
 
-.h1_hero, .h1_about, .numberOverview {
+.h1_hero,
+.h1_about,
+.numberOverview,
+.h1_learning text,
+.p_courses {
   font-family: var(--font-title);
 }
 
-.heroSpanName, .about_span_me {
+.heroSpanName,
+.about_span_me,
+.span_learning {
   font-style: italic;
 }
 
@@ -1013,7 +1100,8 @@ body {
   background-color: var(--color-bg-warm);
 }
 
-body,html{
+body,
+html {
   scroll-behavior: smooth;
 }
 
