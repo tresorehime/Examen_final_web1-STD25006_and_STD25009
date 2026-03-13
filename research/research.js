@@ -68,10 +68,10 @@ function buildPaperCard(paper) {
     target: '_blank',
     rel: 'noopener'
   });
-  
-  
-  
-  
+
+
+
+
 
   const iconSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
   iconSvg.setAttribute('width', '14');
@@ -104,7 +104,7 @@ function fillCTA() {
 
 fillHero();
 fillPaperList();
-fillCTA();function el(tag, classes, attrs) {
+fillCTA(); function el(tag, classes, attrs) {
   const node = document.createElement(tag);
   if (classes) node.className = classes;
   if (attrs) Object.entries(attrs).forEach(([k, v]) => node.setAttribute(k, v));
