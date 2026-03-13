@@ -1,0 +1,50 @@
+body {
+  font-family: 'DM Sans', sans-serif;
+
+}
+
+.font-display { font-family: 'Playfair Display', serif; }
+.font-serif-body { font-family: 'Source Serif 4', serif; }
+
+.label-line::before,
+.label-line::after {
+  content: '';
+  display: inline-block;
+  width: 40px;
+  height: 2px;
+  background: #b91c1c;
+  vertical-align: middle;
+  margin: 0 12px;
+}
+
+.paper-item + .paper-item {
+  border-top: 1px solid #d6cfc6;
+  padding-top: 2.5rem;
+  margin-top: 2.5rem;
+}
+
+.tag-pill {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background-color: #e5e7eb;
+  color: #5a5048;
+  padding: 3px 10px;
+  border-radius: 6px;
+  border: none;
+}
+
+.pdf-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #b91c1c;
+  text-decoration: underline;
+  text-decoration-color: #b91c1c;
+  text-underline-offset: 3px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
