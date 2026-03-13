@@ -6,6 +6,10 @@
     --font-title: 'Playfair display';
     --font-body: 'DM Sans';
     --color-bg-warm: #f9f6f1;
+    --color-bg-white: #ffffff;
+    --color-red-hover: #7f1d1d;
+
+
 }
 
 .navbar {
@@ -23,7 +27,15 @@ li a,
 .about_text,
 .labelOverview,
 .h4_courses,
-.courses_view, .learning_title, .backgound_exp, .who {
+.courses_view,
+.learning_title,
+.backgound_exp,
+.who,
+.org,
+.role,
+.year,
+.p_footer,
+.touch {
     font-family: var(--font-body);
 }
 
@@ -31,7 +43,8 @@ li a,
 .h1_about,
 .numberOverview,
 .h1_learning text,
-.p_courses {
+.p_courses,
+.ready {
     font-family: var(--font-title);
 }
 
@@ -61,6 +74,25 @@ li a,
 .nav_link:hover::after {
     width: 100%;
 }
+
+.group {
+    border-left: 2px solid transparent;
+    padding-left: 1.5rem;
+    transition: all 0.3s ease;
+    margin-left: -1px;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.group:hover {
+    border-left: 2px solid var(--color-red-hover);
+
+}
+
+.experiences {
+    background-color: var(--color-bg-white);
+}
+
 
 body {
     background-color: var(--color-bg-warm);
