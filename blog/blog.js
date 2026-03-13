@@ -15,12 +15,12 @@ function fillHero() {
 
 function buildPostItem(post) {
   const article = document.createElement('article');
-  article.className = 'post-item flex gap-5';
+  article.className = 'post-item flex flex-col sm:flex-row gap-5';
 
   const img = document.createElement('img');
   img.src = post.thumbnail;
   img.alt = post.title;
-  img.className = 'w-44 h-44 object-cover rounded flex-shrink-0';
+  img.className = 'w-full sm:w-44 h-48 sm:h-44 object-cover rounded flex-shrink-0';
 
   const content = document.createElement('div');
   content.className = 'flex-1 min-w-0';
