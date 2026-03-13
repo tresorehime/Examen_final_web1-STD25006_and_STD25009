@@ -1,4 +1,4 @@
-// ─── Utilitaire ───────────────────────────────────────────────────────────────
+
 
 function el(tag, classes, attrs) {
   const node = document.createElement(tag);
@@ -11,7 +11,7 @@ function formatDate(date) {
   return date.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
 }
 
-// ─── Hero : remplissage des textes ────────────────────────────────────────────
+
 
 function fillHero() {
   document.getElementById('hero-label').textContent = 'Academic Work';
@@ -22,18 +22,17 @@ function fillHero() {
   const sub = document.getElementById('hero-sub');
   sub.textContent = 'My academic work focuses on multi-agent systems and normative frameworks, exploring how autonomous agents coordinate through norms and social structures in complex, distributed environments.';
 
-  // aligne la largeur du sous-titre sur celle du titre
+
   requestAnimationFrame(() => {
     sub.style.width = (title.offsetWidth + 60) + 'px';
   });
 }
 
-// ─── Une carte paper ──────────────────────────────────────────────────────────
+
 
 function buildPaperCard(paper) {
   const article = el('article', 'paper-item');
 
-  // Tags + date
   const meta = el('div', 'flex items-center justify-between flex-wrap gap-2 mb-4');
 
   const tagGroup = el('div', 'flex gap-2 flex-wrap');
@@ -48,22 +47,22 @@ function buildPaperCard(paper) {
 
   meta.append(tagGroup, date);
 
-  // Titre
+
   const title = el('h2', 'font-display text-2xl font-bold text-gray-900 mb-2 leading-snug');
   title.textContent = paper.title;
 
-  // Auteurs · journal
+
   const authorsLine = el('p', 'text-sm text-gray-500 mb-3');
   authorsLine.appendChild(document.createTextNode(paper.authors.join(', ') + ' · '));
   const journalEm = el('em');
   journalEm.textContent = paper.journal;
   authorsLine.appendChild(journalEm);
 
-  // Abstract
+
   const abstract = el('p', 'font-serif-body text-gray-700 leading-relaxed text-sm mb-4');
   abstract.textContent = paper.abstract;
 
-  // Lien PDF avec icône SVG rouge
+
   const pdfLink = el('a', 'pdf-link', {
     href: paper.pdfUrl,
     target: '_blank',
@@ -87,14 +86,13 @@ function buildPaperCard(paper) {
   return article;
 }
 
-// ─── Liste papers ─────────────────────────────────────────────────────────────
 
 function fillPaperList() {
   const list = document.getElementById('paper-list');
   data.papers.forEach(paper => list.appendChild(buildPaperCard(paper)));
 }
 
-// ─── CTA : remplissage des textes ─────────────────────────────────────────────
+
 
 function fillCTA() {
   document.getElementById('cta-title').textContent = 'Interested in collaborating?';
@@ -102,7 +100,7 @@ function fillCTA() {
   document.getElementById('cta-btn').textContent = 'Get in touch';
 }
 
-// ─── Lancement ────────────────────────────────────────────────────────────────
+
 
 fillHero();
 fillPaperList();
@@ -117,7 +115,7 @@ function formatDate(date) {
   return date.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
 }
 
-// ─── Hero ─────────────────────────────────────────────────────────────────────
+
 
 function buildHero() {
   const section = el('section', 'text-center py-20 px-4');
@@ -137,7 +135,6 @@ function buildHero() {
   sub.style.textAlign = 'justify';
   sub.textContent = 'My academic work focuses on multi-agent systems and normative frameworks, exploring how autonomous agents coordinate through norms and social structures in complex, distributed environments.';
 
-  // wrapper centré, sous-titre = largeur du titre
   const inner = el('div');
   inner.style.display = 'inline-block';
   inner.style.textAlign = 'center';
@@ -145,7 +142,6 @@ function buildHero() {
   inner.append(heading, sub);
   section.append(label, inner);
 
-  // après rendu : sub prend exactement la largeur du heading
   requestAnimationFrame(() => {
     sub.style.width = heading.offsetWidth + 'px';
   });
@@ -153,12 +149,12 @@ function buildHero() {
   return section;
 }
 
-// ─── Un paper ─────────────────────────────────────────────────────────────────
+
 
 function buildPaperCard(paper) {
   const article = el('article', 'paper-item');
 
-  // Tags + date
+
   const meta = el('div', 'flex items-center justify-between flex-wrap gap-2 mb-4');
 
   const tagGroup = el('div', 'flex gap-2 flex-wrap');
@@ -174,22 +170,21 @@ function buildPaperCard(paper) {
 
   meta.append(tagGroup, date);
 
-  // Titre
+
   const title = el('h2', 'font-display text-2xl font-bold text-gray-900 mb-2 leading-snug');
   title.textContent = paper.title;
 
-  // Auteurs · journal
+
   const authorsLine = el('p', 'text-sm text-gray-500 mb-3');
   authorsLine.appendChild(document.createTextNode(paper.authors.join(', ') + ' · '));
   const journalEm = el('em');
   journalEm.textContent = paper.journal;
   authorsLine.appendChild(journalEm);
 
-  // Abstract
   const abstract = el('p', 'font-serif-body text-gray-700 leading-relaxed text-sm mb-4');
   abstract.textContent = paper.abstract;
 
-  // Lien PDF
+
   const pdfLink = el('a', 'inline-flex items-center gap-1 text-sm font-medium tracking-wide uppercase', {
     href: paper.pdfUrl,
     target: '_blank',
@@ -200,7 +195,7 @@ function buildPaperCard(paper) {
   pdfLink.style.textDecorationColor = '#b91c1c';
   pdfLink.style.textUnderlineOffset = '3px';
 
-  // icône SVG rouge (pas emoji)
+
   const iconSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
   iconSvg.setAttribute('width', '14');
   iconSvg.setAttribute('height', '14');
@@ -215,7 +210,7 @@ function buildPaperCard(paper) {
   return article;
 }
 
-// ─── Liste ────────────────────────────────────────────────────────────────────
+
 
 function buildPaperList() {
   const section = el('section', 'max-w-3xl mx-auto px-6 py-12');
@@ -223,7 +218,6 @@ function buildPaperList() {
   return section;
 }
 
-// ─── CTA ──────────────────────────────────────────────────────────────────────
 
 function buildCTA() {
   const section = el('section', 'text-white text-center py-20 px-6');
@@ -248,7 +242,6 @@ function buildCTA() {
   return section;
 }
 
-// ─── Assemblage ───────────────────────────────────────────────────────────────
 
 function buildPage() {
   const app = document.getElementById('app');
