@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/output.css">
+    <link rel="stylesheet" href="testimonials.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="flex gap-[15rem] items-center md:justify-center md:gap-80 bg-[#991b1b] navbar  py-3 ">
+        <img src="../logo.png" alt="" class="w-32 md:w-52 ">
+        <nav id="mainNav" class="hidden md:flex items-center gap-6">
+            <ul class="flex flex-col md:flex-row items-center gap-4 md:gap-6 text-white text-md">
+                <li><a href="../index.html" class="nav_link">HOME</a></li>
+                <li><a href="#" class="nav_link">BLOG</a></li>
+                <li><a href="#" class="nav_link">COURSES</a></li>
+                <li><a href="./testimonials.html" class="nav_link">TESTIMONIALS</a></li>
+                <li><a href="../research/research.html" class="nav_link">RESEARCH</a></li>
+            </ul>
+        </nav>
+        <div class="hidden md:flex items-center gap-3">
+            <input type="text" placeholder="search anything..."
+                class="input_nav bg-[#991b1b] placeholder-gray-200 text-sm">
+            <i class="fa-solid fa-basket-shopping text-2xl text-white"></i>
+        </div>
+        <button id="menuBtn" class="md:hidden text-white text-2xl">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </header>
+    <div id="mobileMenu" class="hidden flex-col items-center gap-4 py-6 bg-[#7f1d1d] md:hidden ">
+        <ul class="flex flex-col items-center gap-4 text-white text-sm pt-[3rem]">
+            <li><a href="../index.html" class="nav_link">HOME</a></li>
+            <li><a href="#" class="nav_link">BLOG</a></li>
+            <li><a href="#" class="nav_link">COURSES</a></li>
+            <li><a href="./testimonials.html" class="nav_link">TESTIMONIALS</a></li>
+            <li><a href="../research/research.html" class="nav_link">RESEARCH</a></li>
+        </ul>
+        <div class="flex items-center gap-3 mt-2">
+            <input type="text" placeholder="search anything..."
+                class="bg-[#7f1d1d] placeholder-gray-200 text-sm text-white border-b border-white/30 outline-none px-2 py-1">
+            <i class="fa-solid fa-basket-shopping text-xl text-white"></i>
+        </div>
+    </div>
+    <main>
+        <section class="flex flex-col justify-center items-center px-4 md:px-0">
+            <span
+                class="text-gray-500 p_work text-xs md:text-sm pt-24 md:pt-28 flex gap-2 justify-center items-center social">
+                <hr class="w-8 border-t-2 border-red-800"> SOCIAL PROOF
+                <hr class="w-8 border-t-2 border-red-800">
+            </span>
+            <h1
+                class="text-3xl sm:text-4xl md:text-6xl h1_hero w-full md:w-[400px] text-center font-semibold pt-6 leading-tight">
+                What people <span class="say_span_testimonials text-red-800">say</span>
+            </h1>
+            <p
+                class="text-gray-600 w-full sm:w-[350px] md:w-[400px] text-xs md:text-sm text-center pt-5 md:pt-7 description">
+                Hundreds of students,
+                collaborators, and clients have trusted Tokimahery's expertise. Here's what
+                they have to say.
+            </p>
+        </section>
+        <section class="mt-9 bg-white py-8 md:py-16 px-4 md:px-24 lg:px-48">
+            <span class="text-gray-500 p_work text-xs flex gap-2 items-center font_body">
+                <hr class="w-8 border-t-2 border-red-800">STUDENTS
+            </span>
+            <div id="students" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-3 mt-10">
+            </div>
+        </section>
+        <section class="mt-[4rem] px-4 md:px-24 lg:px-64">
+            <span class="text-gray-500 p_work text-xs flex gap-2 items-center font_body">
+                <hr class="w-8 border-t-2 border-red-800">COLLABORATORS
+            </span>
+            <div id="collaborator" class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-3 mt-10">
+            </div>
+        </section>
+
+        <section class="mt-9 bg-white py-8 md:py-16 px-4 md:px-24 lg:px-48">
+            <span class="text-gray-500 p_work text-xs flex gap-2 items-center font_body">
+                <hr class="w-8 border-t-2 border-red-800">CUSTOMERS
+            </span>
+            <div id="customer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 mt-10">
+            </div>
+        </section>
+    </main>
+    <footer class="bg-[#b91c1c] text-white flex flex-col justify-center items-center pb-16 px-4">
+        <h1 class="ready text-2xl md:text-4xl font-bold mt-12 md:mt-16 text-center">Join them</h1>
+        <p class="p_footer text-xs md:text-sm pt-4 pb-6 text-white/70 w-full sm:w-[350px] md:w-[410px] text-center">
+            Whether you want to learn, collaborate, or get something
+            built – Tokimahery is ready to help you move forward.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3">
+            <button class="touch cursor-pointer rounded-3xl py-1 px-4 border-2 border-white text-red-700 bg-white">
+                <a href="#">GET IN TOUCH</a>
+            </button>
+            <button
+                class="touch cursor-pointer rounded-3xl py-1 px-4 border-2 border-white hover:text-red-700 hover:bg-white transition-all duration-300">
+                <a href="#">COLLABORATE</a>
+            </button>
+        </div>
+    </footer>
+    <script src="../tokimahery.data.js"></script>
+    <script src="testimonials.js"></script>
+</body>
+
+</html>

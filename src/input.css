@@ -96,6 +96,28 @@ body {
     background-color: var(--color-bg-warm);
 }
 
+.all_experiences {
+    align-items: flex-start;
+}
+
+.exp_col {
+    width: 100%;
+}
+
+.exp_text {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .exp_col {
+        width: 500px;
+    }
+
+    .exp_text {
+        width: 500px;
+    }
+}
+
 body,
 html {
     scroll-behavior: smooth;
