@@ -57,8 +57,6 @@ window.onload = function () {
         ${col2.map((exp, i) => experiences(exp, i)).join('')}
     </div>
 `;
-
-
 };
 
 
