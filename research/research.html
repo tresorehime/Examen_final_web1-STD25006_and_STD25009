@@ -14,25 +14,40 @@
 </head>
 
 <body class="bg-[#ffffff] text-[#1a1a1a]">
-
-  <header class="flex justify-center items-center gap-80 bg-[#991b1b] navbar">
-    <img src="../logo.png" alt="" class="w-52">
-    <nav>
-      <ul class="flex justify-center items-center gap-6 text-white text-md">
+  <header class="flex gap-[15rem] items-center md:justify-center md:gap-80 bg-[#991b1b] navbar py-1 ">
+    <img src="../logo.png" alt="" class="w-32 md:w-52 ">
+    <nav id="mainNav" class="hidden md:flex items-center gap-6">
+      <ul class="flex flex-col md:flex-row items-center gap-4 md:gap-6 text-white text-md">
         <li><a href="../index.html" class="nav_link">HOME</a></li>
-        <li><a href="#" class="nav_link">BLOG</a></li>
+        <li><a href="../blog/blog.html" class="nav_link">BLOG</a></li>
         <li><a href="#" class="nav_link">COURSES</a></li>
         <li><a href="../testimonials/testimonials.html" class="nav_link">TESTIMONIALS</a></li>
-        <li><a href="./research/research.html" class="nav_link">RESEARCH</a></li>
+        <li><a href="./research.html" class="nav_link">RESEARCH</a></li>
       </ul>
     </nav>
-    <div>
+    <div class="hidden md:flex items-center gap-3">
       <input type="text" placeholder="search anything..." class="input_nav bg-[#991b1b] placeholder-gray-200 text-sm">
       <i class="fa-solid fa-basket-shopping text-2xl text-white"></i>
     </div>
+    <button id="menuBtn" class="md:hidden text-white text-2xl">
+      <i class="fa-solid fa-bars"></i>
+    </button>
   </header>
+  <div id="mobileMenu" class="hidden flex-col items-center gap-4 py-6 bg-[#7f1d1d] md:hidden ">
+    <ul class="flex flex-col items-center gap-4 text-white text-sm pt-[3rem]">
+      <li><a href="../index.html" class="nav_link">HOME</a></li>
+      <li><a href="../blog/blog.html" class="nav_link">BLOG</a></li>
+      <li><a href="#" class="nav_link">COURSES</a></li>
+      <li><a href="../testimonials/testimonials.html" class="nav_link">TESTIMONIALS</a></li>
+      <li><a href="./research.html" class="nav_link">RESEARCH</a></li>
+    </ul>
+    <div class="flex items-center gap-3 mt-2">
+      <input type="text" placeholder="search anything..."
+        class="bg-[#7f1d1d] placeholder-gray-200 text-sm text-white border-b border-white/30 outline-none px-2 py-1">
+      <i class="fa-solid fa-basket-shopping text-xl text-white"></i>
+    </div>
+  </div>
 
-  <!-- HERO -->
   <section id="hero" class="text-center py-20 px-4 bg-[#fdf2f2]">
     <p id="hero-label" class="label-line text-xs font-medium tracking-widest uppercase mb-6" style="color:#979592"></p>
     <div class="inline-block text-center">
@@ -41,10 +56,10 @@
     </div>
   </section>
 
-  <!-- LISTE DES PAPERS -->
+
   <section id="paper-list" class="max-w-4xl mx-auto px-6 py-12"></section>
 
-  <!-- CTA -->
+
   <section id="cta" class="text-white text-center py-20 px-6 bg-[#b91c1c]">
     <h2 id="cta-title" class="font-display text-4xl font-bold italic mb-4"></h2>
     <p id="cta-sub" class="mb-8 max-w-md mx-auto text-[#fecaca]"></p>

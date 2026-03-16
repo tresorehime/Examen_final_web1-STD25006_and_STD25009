@@ -34,12 +34,12 @@ window.onload = function () {
 
     });
 
-  const expContainer = document.querySelector('.all_experiences');
+    const expContainer = document.querySelector('.all_experiences');
 
-const col1 = data.experiences.slice(0, 2);
-const col2 = data.experiences.slice(2, 4);
+    const col1 = data.experiences.slice(0, 2);
+    const col2 = data.experiences.slice(2, 4);
 
-const experiences = (exp, index) => `
+    const experiences = (exp, index) => `
     <div class="${index > 0 ? 'pt-8' : ''} group">
         <span class="year text-red-800 font-semibold">${exp.year.toUpperCase()}</span>
         <h1 class="role text-xl pt-2 pb-3 font-semibold">${exp.role}</h1>
@@ -48,7 +48,7 @@ const experiences = (exp, index) => `
     </div>
 `;
 
-expContainer.innerHTML = `
+    expContainer.innerHTML = `
     <div class="exp_col border-l-2 pr-6">
         ${col1.map((exp, i) => experiences(exp, i)).join('')}
     </div>
@@ -67,7 +67,6 @@ expContainer.innerHTML = `
         const icon = menuBtn.querySelector('i');
         icon.classList.toggle('fa-bars');
         icon.classList.toggle('fa-xmark');
-
 
     });
 };
