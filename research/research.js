@@ -243,11 +243,7 @@ function buildCTA() {
 }
 
 
-function buildPage() {
-  const app = document.getElementById('app');
-  app.appendChild(buildHero());
-  app.appendChild(buildPaperList());
-  app.appendChild(buildCTA());
-}
+  fillHero();
+  fillPaperList();
+  fillCTA();
 
-buildPage();

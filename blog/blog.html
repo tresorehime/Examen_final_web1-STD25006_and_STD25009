@@ -13,26 +13,56 @@
 
 </head>
 <body class="bg-white text-[#1a1a1a]">
-  <header class="flex justify-center items-center gap-80 bg-[#991b1b] navbar">
-        <img src="../logo.png" alt="" class="w-52">
-        <nav>
-            <ul class="flex justify-center items-center gap-6 text-white text-md">
-                <li><a href="../index.html" class="nav_link">HOME</a></li>
-                <li><a href="../blog/blog.html" class="nav_link">BLOG</a></li>
-                <li><a href="#" class="nav_link">COURSES</a></li>
-                <li><a href="#" class="nav_link">TESTIMONIALS</a></li>
-                <li><a href="#" class="nav_link">RESEARCH</a></li>
-            </ul>
-        </nav>
-        <div>
-            <input type="text" placeholder="search anything..."
-                class="input_nav bg-[#991b1b] placeholder-gray-200 text-sm">
-            <i class="fa-solid fa-basket-shopping text-2xl text-white"></i>
-        </div>
-    </header>
+  <header class="flex lg:justify-center lg:items-center lg:gap-80 bg-[#991b1b] navbar">
+
+
+    <img src="../logo.png" alt="" class="hidden lg:block w-52">
+    <nav class="hidden lg:block">
+      <ul class="flex items-center gap-6 text-white text-md">
+        <li><a href="../index.html" class="nav_link">HOME</a></li>
+        <li><a href="../blog/blog.html" class="nav_link">BLOG</a></li>
+        <li><a href="#" class="nav_link">COURSES</a></li>
+        <li><a href="#" class="nav_link">TESTIMONIALS</a></li>
+        <li><a href="../research/research.html" class="nav_link">RESEARCH</a></li>
+      </ul>
+    </nav>
+    <div class="hidden lg:flex items-center gap-4">
+      <input type="text" placeholder="search anything..." class="input_nav bg-[#991b1b] placeholder-gray-200 text-sm">
+      <i class="fa-solid fa-basket-shopping text-2xl text-white"></i>
+    </div>
+
+
+    <div class="lg:hidden flex justify-between items-center px-5 w-full">
+      <img src="../logo.png" alt="" class="w-36">
+      <button id="burger-btn" class="text-white text-2xl">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+  </header>
+
+  <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full bg-[#991b1b] z-50 flex-col px-5 py-4 gap-3">
+    <div class="flex justify-between items-center mb-3">
+      <img src="../logo.png" alt="" class="w-36">
+      <button id="close-btn" class="text-white text-2xl">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="flex items-center gap-3 mb-3">
+      <input type="text" placeholder="Search anything..." class="flex-1 bg-[#7f1d1d] placeholder-gray-300 text-white text-sm px-3 py-2 rounded">
+      <i class="fa-solid fa-basket-shopping text-xl text-white"></i>
+    </div>
+    <ul class="flex flex-col gap-3 text-white text-sm">
+      <li><a href="../index.html" class="nav_link">HOME</a></li>
+      <li><a href="#" class="nav_link">BLOG</a></li>
+      <li><a href="#" class="nav_link">COURSES</a></li>
+      <li><a href="#" class="nav_link">TESTIMONIALS</a></li>
+      <li><a href="../research/research.html" class="nav_link">RESEARCH</a></li>
+    </ul>
+  </div>
 
   <section class="text-center py-16 px-4 bg-[#fdf2f2]">
-    <p id="hero-label" class="label-line text-xs font-medium tracking-widest uppercase text-gray-500 mb-5"></p>
+    <p id="hero-label" class="label-line text-xs font-medium tracking-widest uppercase mb-6 mt-4" style="color:#979592"></p>
     <h1 id="hero-title" class="font-display text-6xl font-bold mb-4"></h1>
     <p id="hero-sub" class="font-serif-body text-gray-500 text-base max-w-xs mx-auto"></p>
   </section>
@@ -79,5 +109,6 @@
 
   <script src="../tokimahery.data.js"></script>
   <script src="blog.js"></script>
+  <script src="../navbar.js"></script>
 </body>
 </html>
