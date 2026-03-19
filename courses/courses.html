@@ -49,88 +49,94 @@
         </div>
     </div>
     <main>
-        <section class="flex justify-center items-center flex-col">
-            <span class="text-gray-500 flex items-center gap-3 text-sm justify-center fon_body ">
+        <section class="flex justify-center items-center flex-col px-4 pt-6">
+            <span class="text-gray-500 flex items-center gap-3 text-sm justify-center font_body">
                 <hr class="w-8 border-t-2 border-red-800">LEARNING
                 <hr class="w-8 border-t-2 border-red-800">
             </span>
-            <h1 class="text-4xl md:text-6xl  font_title  pt-8 font-semibold pb-5">
-                All
-                <span class="text-red-800 italic">courses</span>
+            <h1 class="text-4xl md:text-6xl font_title pt-8 font-semibold pb-5 text-center">
+                All <span class="text-red-800 italic">courses</span>
             </h1>
             <p class="text-gray-600 w-full md:w-[500px] font_body text-sm md:text-base text-center">
-                Online and offline courses across
-                development, translation, and research. Find the one that fits your level and
-                goals.
+                Online and offline courses across development, translation, and research.
+                Find the one that fits your level and goals.
             </p>
         </section>
+
         <section class="bg-white function_container flex justify-center items-center flex-col">
-            <section class="function_board rounded-lg flex justify-center items-center gap-10">
-                <div class="flex justify-center flex-col items-center">
-                    <label class="block mb-4 text-gray-400 text-xs font_body ">LANGUAGE</label>
-                    <div class="flex gap-3">
-                        <img src="https://purecatamphetamine.github.io/country-flag-icons/3x2/MG.svg"
-                            class="img_flag" />
-                        <img src="https://purecatamphetamine.github.io/country-flag-icons/3x2/FR.svg"
-                            class="img_flag" />
-                        <img src="https://purecatamphetamine.github.io/country-flag-icons/3x2/US.svg"
-                            class="img_flag" />
-                    </div>
-                </div>
 
-                <div>
-                    <label class="block mb-2 text-gray-400 text-xs font_bofy">TECHNOLOGY</label>
-                    <select class="font_body">
-                        <option>All technologies</option>
-                        <option>JavaScript</option>
-                        <option>Java</option>
-                        <option>SQL</option>
-                    </select>
-                </div>
-                <div>
-                    <label class="block mb-2 text-gray-400 text-xs font_body">LEVEL</label>
-                    <select class="font_body">
-                        <option>All levels</option>
-                        <option>Beginner</option>
-                        <option>Intermediate</option>
-                        <option>Advanced</option>
-                    </select>
-                </div>
-                <div class="">
-                    <div class="flex gap-3 ">
-                        <label class="block mb-1 text-gray-400 text-xs font_body">PRICE RANGE</label>
-                        <span class="text-xs text-red-800 font-medium font_body">0 Ar – 300,000 Ar</span>
+            <section class="function_board rounded-lg w-full max-w-6xl px-4 md:px-8">
+                <div
+                    class="flex flex-col md:flex-row flex-wrap justify-center items-start md:items-center gap-6 md:gap-8">
+
+                
+                    <div class="flex flex-col items-start md:items-center">
+                        <label class="block mb-2 text-gray-400 text-xs font_body">LANGUAGE</label>
+                        <div class="flex gap-3 items-center">
+                            <img src="https://purecatamphetamine.github.io/country-flag-icons/3x2/MG.svg"
+                                class="img_flag cursor-pointer hover:opacity-70 transition" />
+                            <img src="https://purecatamphetamine.github.io/country-flag-icons/3x2/FR.svg"
+                                class="img_flag cursor-pointer hover:opacity-70 transition" />
+                            <img src="https://purecatamphetamine.github.io/country-flag-icons/3x2/US.svg"
+                                class="img_flag cursor-pointer hover:opacity-70 transition" />
+                        </div>
                     </div>
-                    <div class="range-wrapper flex flex-col ">
-                        <input type="range" min="0" max="0" value="300000" class="mt-2 " id="min_range" />
-                        <input type="range" min="0" max="300000" value="300000" class="mt-1" id="max_range" />
+                    <div class="flex flex-col items-start">
+                        <label class="block mb-2 text-gray-400 text-xs font_body">TECHNOLOGY</label>
+                        <select id="filter_tech" class="font_body w-full">
+                            <option value="">All technologies</option>
+                            <option value="javascript">JavaScript</option>
+                            <option value="java">Java</option>
+                            <option value="sql">SQL</option>
+                        </select>
+                    </div>
+                    <div class="flex flex-col items-start">
+                        <label class="block mb-2 text-gray-400 text-xs font_body">LEVEL</label>
+                        <select id="filter_level" class="font_body w-full">
+                            <option value="">All levels</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </div>
+                    <div class="flex flex-col items-start w-full md:w-auto">
+                        <div class="flex gap-3 items-center mb-1">
+                            <label class="text-gray-400 text-xs font_body">PRICE RANGE</label>
+                            <span id="price_label" class="text-xs text-red-800 font-medium font_body">0 Ar – 300 000
+                                Ar</span>
+                        </div>
+                        <div class="range-wrapper flex flex-col w-full md:w-44">
+                            <input type="range" min="0" max="300000" value="0" class="mt-2 w-full" id="min_range" />
+                            <input type="range" min="0" max="300000" value="300000" class="mt-1 w-full"
+                                id="max_range" />
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-start w-full md:w-44">
+                        <label class="block mb-2 font_body text-gray-400 text-xs">SEARCH</label>
+                        <input id="filter_search" type="text" placeholder="Keywords..." class="search_courses w-full" />
                     </div>
 
-                </div>
-                <div class="flex-1 min-w-[160px]">
-                    <label class="block mb-2 font_body text-gray-400">SEARCH</label>
-                    <input type="text" placeholder="Keywords..." class="search_courses" />
-                </div>
-                <div>
-                    <button
-                        class="text-xs text-gray-400 hover:text-gray-600 uppercase tracking-widest font-medium transition">CLEAR
-                        ALL</button>
-                </div>
+                    <div class="flex items-end pb-1">
+                        <button id="clear_filters"
+                            class="text-xs text-gray-400 hover:text-red-800 uppercase tracking-widest font-medium transition">
+                            CLEAR ALL
+                        </button>
+                    </div>
+
                 </div>
             </section>
-            <section class=" mx-auto  pb-20 mt-8 border-t-2 px-44 py-4">
-                <p id="results_count"
-                    class="text-xs text-gray-400 uppercase tracking-widest  font_body mb-6">9 COURSES FOUND
+            <section class="w-full max-w-6xl mx-auto pb-20 mt-8 border-t-2 px-4 md:px-10 py-4">
+                <p id="results_count" class="text-xs text-gray-400 uppercase tracking-widest font_body mb-6">
+                    9 COURSES FOUND
                 </p>
-                <div id="courses_grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-9">
-                
+                <div id="courses_grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 </div>
             </section>
 
         </section>
 
     </main>
-      <footer class="bg-[#b91c1c] text-white flex flex-col justify-center items-center pb-16 px-4">
+    <footer class="bg-[#b91c1c] text-white flex flex-col justify-center items-center pb-16 px-4">
         <h1 class="ready text-2xl md:text-4xl font-bold mt-12 md:mt-16 text-center">Not sure where to start?</h1>
         <p class="p_footer text-xs md:text-sm pt-4 pb-6 text-white/70 w-full sm:w-[350px] md:w-auto text-center">
             Book a free discoverycall and find thr course that fits your goals and schedule.
