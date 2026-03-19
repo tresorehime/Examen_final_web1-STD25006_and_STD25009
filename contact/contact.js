@@ -1,26 +1,28 @@
-
 const contactData = {
-  label: 'Get in touch',
-  title: "Let's <em>talk.</em>",
-  sub: "Whether you're looking for a consultation, a co-authoring opportunity, or just want to say hello — I'm always open to meaningful conversations.",
+  card: {
+    title: "Let's <em>talk.</em>",
+    sub: "Whether you're looking for a consultation, a co-authoring opportunity, or just want to say hello — I'm always open.",
+  },
   infos: [
     { icon: 'fa-solid fa-envelope', text: 'tokimahery@example.com', href: 'mailto:tokimahery@example.com' },
     { icon: 'fa-brands fa-linkedin', text: 'linkedin.com/in/tokimahery', href: 'https://linkedin.com' },
     { icon: 'fa-solid fa-location-dot', text: 'Antananarivo, Madagascar', href: null },
   ],
   form: {
+    heading: "Get in <em>touch</em>",
+    sub: 'Feel free to drop us a line below!',
     name: 'Full name',
     email: 'Email address',
     subject: 'Subject',
     message: 'Your message',
-    submit: 'Send message',
+    submit: 'Send',
   },
   reasons: {
     label: 'Why reach out',
     title: 'What I can help with',
     items: [
       { icon: 'fa-solid fa-chalkboard-user', title: 'Teaching & Courses', desc: 'Book a course, ask about custom training sessions, or discuss pedagogy and curriculum.' },
-      { icon: 'fa-solid fa-flask', title: 'Research & Co-authoring', desc: 'Interested in multi-agent systems or normative frameworks? Let\'s collaborate on something meaningful.' },
+      { icon: 'fa-solid fa-flask', title: 'Research & Co-authoring', desc: "Interested in multi-agent systems or normative frameworks? Let's collaborate on something meaningful." },
       { icon: 'fa-solid fa-code', title: 'Consulting & Dev', desc: "Need a technical consultant or developer for your project? I'm available for focused engagements." },
     ]
   },
@@ -32,12 +34,11 @@ const contactData = {
 };
 
 
-function fillContactLeft() {
-  document.getElementById('contact-label').textContent = contactData.label;
-  document.getElementById('contact-title').innerHTML = contactData.title;
-  document.getElementById('contact-sub').textContent = contactData.sub;
+function fillCard() {
+  document.getElementById('contact-title').innerHTML = contactData.card.title;
+  document.getElementById('contact-sub').textContent = contactData.card.sub;
 
-  const infoList = document.getElementById('contact-info');
+  const list = document.getElementById('contact-info');
   contactData.infos.forEach(info => {
     const item = document.createElement('div');
     item.className = 'contact-info-item';
@@ -57,19 +58,20 @@ function fillContactLeft() {
       item.appendChild(span);
     }
 
-    infoList.appendChild(item);
+    list.appendChild(item);
   });
 }
 
 
 function fillForm() {
   const f = contactData.form;
+  document.getElementById('form-heading').innerHTML = f.heading;
+  document.getElementById('form-sub').textContent = f.sub;
   document.getElementById('label-name').textContent = f.name;
   document.getElementById('label-email').textContent = f.email;
   document.getElementById('label-subject').textContent = f.subject;
   document.getElementById('label-message').textContent = f.message;
   document.getElementById('submit-btn').textContent = f.submit;
-
   document.getElementById('input-name').placeholder = f.name;
   document.getElementById('input-email').placeholder = f.email;
   document.getElementById('input-subject').placeholder = f.subject;
@@ -79,7 +81,7 @@ function fillForm() {
 
 function fillReasons() {
   document.getElementById('reasons-label').textContent = contactData.reasons.label;
-  document.getElementById('reasons-title').innerHTML = contactData.reasons.title;
+  document.getElementById('reasons-title').textContent = contactData.reasons.title;
 
   const list = document.getElementById('reasons-list');
   contactData.reasons.items.forEach(item => {
@@ -111,7 +113,7 @@ function fillCTA() {
 }
 
 
-fillContactLeft();
+fillCard();
 fillForm();
 fillReasons();
 fillCTA();
