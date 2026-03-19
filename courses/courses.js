@@ -38,33 +38,13 @@ window.onload = function () {
                         <div class="card-price">${formatPrice(c.price)}</div>
                         <p class="card-desc">${c.description}</p>
                         <div class="card-actions">
-                            <button class="btn-learn shadow-sm">Learn more</button>
-                            <button class="btn-cart"><i class="fa-solid fa-cart-shopping mr-1"></i>Add to cart</button>
+                            <button class="btn-learn shadow-sm whitespace-nowrap"">Learn more</button>
+                            <button class="btn-cart  whitespace-nowrap"><i class="fa-solid fa-cart-shopping mr-1"></i>Add to cart</button>
                         </div>
                     </div>
                 </div>`;
             }).join('');
         }
-
-          function applyFilters() {
-            const tech    = document.getElementById('filter_tech').value;
-            const level   = document.getElementById('filter_level').value;
-            const search  = document.getElementById('filter_search').value.toLowerCase();
-            const minVal  = parseInt(document.getElementById('min_range').value);
-            const maxVal  = parseInt(document.getElementById('max_range').value);
-
-            const filtered = data.courses.filter(c => {
-                if (activeLang && c.language !== activeLang) return false;
-                if (tech && !c.technologies.includes(tech)) return false;
-                if (level && c.level !== level) return false;
-                if (c.price < minVal || c.price > maxVal) return false;
-                if (search && !c.title.toLowerCase().includes(search) && !c.description.toLowerCase().includes(search)) return false;
-                return true;
-            });
-
-            renderCards(filtered);
-        }
-
       renderCards(data.courses);
 
 }
