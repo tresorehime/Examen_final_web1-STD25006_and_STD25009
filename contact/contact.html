@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>T. Ramarozaka — Contact</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Source+Serif+4:wght@400;600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../src/input.css" />
+  <link rel="stylesheet" href="../src/output.css" />
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body class="bg-white text-[#1a1a1a] overflow-x-hidden">
+
+  <header class="flex lg:justify-center lg:items-center lg:gap-80 bg-[#991b1b] navbar">
+    <img src="../logo.png" alt="" class="hidden lg:block w-52">
+    <nav class="hidden lg:block">
+      <ul class="flex items-center gap-6 text-white text-md">
+        <li><a href="../index.html" class="nav_link">HOME</a></li>
+        <li><a href="../blog/blog.html" class="nav_link">BLOG</a></li>
+        <li><a href="#" class="nav_link">COURSES</a></li>
+        <li><a href="#" class="nav_link">TESTIMONIALS</a></li>
+        <li><a href="../research/research.html" class="nav_link">RESEARCH</a></li>
+      </ul>
+    </nav>
+    <div class="hidden lg:flex items-center gap-4">
+      <input type="text" placeholder="search anything..." class="input_nav bg-[#991b1b] placeholder-gray-200 text-sm">
+      <i class="fa-solid fa-basket-shopping text-2xl text-white"></i>
+    </div>
+    <div class="lg:hidden flex justify-between items-center px-5 w-full">
+      <img src="../logo.png" alt="" class="w-36">
+      <button id="burger-btn" class="text-white text-2xl">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full bg-[#991b1b] z-50 flex-col px-5 py-4 gap-3">
+    <div class="flex justify-between items-center mb-3">
+      <img src="../logo.png" alt="" class="w-36">
+      <button id="close-btn" class="text-white text-2xl">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="flex items-center gap-3 mb-3">
+      <input type="text" placeholder="Search anything..." class="flex-1 bg-[#7f1d1d] placeholder-gray-300 text-white text-sm px-3 py-2 rounded">
+      <i class="fa-solid fa-basket-shopping text-xl text-white"></i>
+    </div>
+    <ul class="flex flex-col gap-3 text-white text-sm">
+      <li><a href="../index.html" class="nav_link">HOME</a></li>
+      <li><a href="../blog/blog.html" class="nav_link">BLOG</a></li>
+      <li><a href="#" class="nav_link">COURSES</a></li>
+      <li><a href="#" class="nav_link">TESTIMONIALS</a></li>
+      <li><a href="../research/research.html" class="nav_link">RESEARCH</a></li>
+    </ul>
+  </div>
+
+  <div class="contact-split">
+
+    <div class="contact-left">
+      <p id="contact-label" class="contact-label"></p>
+      <h1 id="contact-title" class="contact-title"></h1>
+      <p id="contact-sub" class="contact-sub"></p>
+
+      <div id="contact-info" class="contact-info-list"></div>
+    </div>
+
+    <div class="contact-form-wrapper">
+      <form id="contact-form" class="contact-form" onsubmit="return false;">
+        <div class="form-row">
+          <div class="form-group">
+            <label id="label-name"></label>
+            <input type="text" id="input-name" class="form-input" />
+          </div>
+          <div class="form-group">
+            <label id="label-email"></label>
+            <input type="email" id="input-email" class="form-input" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label id="label-subject"></label>
+          <input type="text" id="input-subject" class="form-input" />
+        </div>
+        <div class="form-group">
+          <label id="label-message"></label>
+          <textarea id="input-message" class="form-input form-textarea"></textarea>
+        </div>
+        <button id="submit-btn" type="submit" class="form-submit"></button>
+      </form>
+    </div>
+
+  </div>
+
+
+  <section class="py-20 px-8 bg-[#f9f6f1]">
+    <div class="max-w-5xl mx-auto">
+      <p id="reasons-label" class="label-line text-xs font-medium tracking-widest uppercase text-gray-500 mb-5 text-center"></p>
+      <h2 id="reasons-title" class="font-display text-4xl font-bold text-center mb-14"></h2>
+      <div id="reasons-list" class="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+    </div>
+  </section>
+
+  <section class="bg-[#b91c1c] text-white text-center py-20 px-6">
+    <h2 id="cta-title" class="font-display text-4xl font-bold italic mb-3"></h2>
+    <p id="cta-sub" class="text-red-200 mb-8 max-w-md mx-auto text-sm"></p>
+    <a id="cta-btn" href="#contact-form"
+      class="inline-block border border-white text-white px-8 py-3 text-sm font-medium tracking-widest uppercase rounded-full hover:bg-white hover:text-[#b91c1c] transition-colors duration-200">
+    </a>
+  </section>
+
+  <script src="../tokimahery.data.js"></script>
+  <script src="contact.js"></script>
+  <script src="../navbar.js"></script>
+</body>
+</html>
