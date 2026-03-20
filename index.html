@@ -5,148 +5,146 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-    <link rel="stylesheet" href="src/output.css">
-    <link rel="stylesheet" href="src/input.css">
-
+    <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="./src/input.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@400;500&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
 </head>
 
 <body class="overflow-x-hidden">
-  <header class="flex justify-center items-center gap-80 bg-[#991b1b] navbar">
-        <img src="logo.png" alt="" class="w-52">
-        <nav>
-            <ul class="flex justify-center items-center gap-6 text-white text-md">
-                <li><a href="#" class="nav_link">HOME</a></li>
-                <li><a href="/blog/blog.html" class="nav_link">BLOG</a></li>
-                <li><a href="#" class="nav_link">COURSES</a></li>
-                <li><a href="#" class="nav_link">TESTIMONIALS</a></li>
-                <li><a href="/research/research.html" class="nav_link">RESEARCH</a></li>
-                <li><a href="/contact/contact.html" class="nav_link">CONTACT</a></li>
-
+    <header class="flex gap-[15rem] items-center md:justify-center md:gap-80 bg-[#991b1b] navbar py-1 font_body">
+        <img src="./logo.png" alt="" class="w-32 md:w-52">
+        <nav id="mainNav" class="hidden md:flex items-center gap-6">
+            <ul class="flex flex-col md:flex-row items-center gap-4 md:gap-6 text-white text-md">
+                <li><a href="./index.html" class="nav_link">HOME</a></li>
+                <li><a href="./blog/blog.html" class="nav_link">BLOG</a></li>
+                <li><a href="./courses/courses.html" class="nav_link">COURSES</a></li>
+                <li><a href="./testimonials/testimonials.html" class="nav_link">TESTIMONIALS</a></li>
+                <li><a href="./research/research.html" class="nav_link">RESEARCH</a></li>
+                <li><a href="./contact/contact.html" class="nav_link">CONTACT</a></li>
             </ul>
         </nav>
-        <div>
-            <input type="text" placeholder="search anything..."
-                class="input_nav bg-[#991b1b] placeholder-gray-200 text-sm">
+        <div class="hidden md:flex items-center gap-3">
+            <input type="text" placeholder="search anything..." class="input_nav bg-[#991b1b] placeholder-gray-200 text-sm">
             <i class="fa-solid fa-basket-shopping text-2xl text-white"></i>
         </div>
+        <button id="menuBtn" class="md:hidden text-white text-2xl">
+            <i class="fa-solid fa-bars"></i>
+        </button>
     </header>
+    <div id="mobileMenu" class="hidden flex-col items-center gap-4 py-6 bg-[#7f1d1d] md:hidden font_body">
+        <ul class="flex flex-col items-center gap-4 text-white text-sm pt-[3rem]">
+            <li><a href="./index.html" class="nav_link">HOME</a></li>
+            <li><a href="./blog/blog.html" class="nav_link">BLOG</a></li>
+            <li><a href="./courses/courses.html" class="nav_link">COURSES</a></li>
+            <li><a href="./testimonials/testimonials.html" class="nav_link">TESTIMONIALS</a></li>
+            <li><a href="./research/research.html" class="nav_link">RESEARCH</a></li>
+            <li><a href="./contact/contact.html" class="nav_link">CONTACT</a></li>
+        </ul>
+        <div class="flex items-center gap-3 mt-2">
+            <input type="text" placeholder="search anything..." class="bg-[#7f1d1d] placeholder-gray-200 text-sm text-white border-b border-white/30 outline-none px-2 py-1">
+            <i class="fa-solid fa-basket-shopping text-xl text-white"></i>
+        </div>
+    </div>
     <main>
-        <section class="hero flex items-center pt-[13rem] gap-20 ml-[15rem]">
+        <section class="hero flex flex-col md:flex-row items-center pt-24 md:pt-[13rem] gap-10 md:gap-20 px-6 md:ml-[15rem]">
             <div>
                 <div>
                     <span class="text-red-800 flex items-center text-sm gap-3 mb-4 font-semibold">
-                        <hr class="w-8 border-t-2 border-red-800 ">PORTFOLIO & SERVICES
+                        <hr class="w-8 border-t-2 border-red-800">PORTFOLIO & SERVICES
                     </span>
-                    <h1 class="text-6xl h1_hero w-[300px]">Tokimahery <span
-                            class="text-red-800 heroSpanName">Ramarozaka</span>
-                    </h1>
-                    <p class="text-gray-500 p_work text-sm mt-6 mb-6">CONSULTANT - TEACHER - DEVELOPER - TRANSLATOR -
-                        PHD
-                    </p>
-                    <p class="text-gray-600 w-[500px] description ">
-                        Bridging knowledge across disciplines — from cutting-edge software
-                        development to academic research and multilingual expertise.
+                    <h1 class="text-4xl md:text-6xl h1_hero w-full md:w-[300px]">Tokimahery <span class="text-red-800 heroSpanName">Ramarozaka</span></h1>
+                    <p class="text-gray-500 p_work text-xs md:text-sm mt-6 mb-6">CONSULTANT - TEACHER - DEVELOPER - TRANSLATOR - PHD</p>
+                    <p class="text-gray-600 w-full md:w-[500px] description text-sm md:text-base">
+                        Bridging knowledge across disciplines — from cutting-edge software development to academic research and multilingual expertise.
                     </p>
                 </div>
-                <div class="hero_button flex gap-6 mt-7">
-                    <button class="text-white bg-[#b91c1c] py-3 px-6 rounded-lg border-red-900 border-2"><a
-                            href="#">Book a course</a></button>
-                    <button class="bg-[#ffffff] py-3 px-6 rounded-lg border-2 border-gray-200"><a href="#about_me">About
-                            me</a></button>
+                <div class="hero_button flex flex-col sm:flex-row gap-4 mt-7">
+                    <button class="text-white bg-[#b91c1c] py-3 px-6 rounded-lg border-red-900 border-2 w-full sm:w-auto">
+                        <a href="#">Book a course</a>
+                    </button>
+                    <button class="bg-white py-3 px-6 rounded-lg border-2 border-gray-200 w-full sm:w-auto">
+                        <a href="#about_me">About me</a>
+                    </button>
                 </div>
                 <div class="mt-7">
-                    <a href="#" class="text-red-800 text-sm collab cursor-pointer">ASK FOR COLLABORATION <i
-                            class="fa-solid fa-arrow-right text-red-800 text-[0.7rem] ml-1"></i></a>
-                    <hr class="w-[12rem] border-t-2 border-red-800 ">
+                    <a href="#" class="text-red-800 text-sm collab cursor-pointer">ASK FOR COLLABORATION
+                        <i class="fa-solid fa-arrow-right text-red-800 text-[0.7rem] ml-1"></i>
+                    </a>
+                    <hr class="w-[12rem] border-t-2 border-red-800">
                 </div>
                 <div class="hero_icon flex gap-4 text-xl mt-8 cursor-pointer">
-                    <i
-                        class="fa-brands fa-facebook text-gray-500 hover:-translate-y-1 transition-all duration-[400ms] hover:text-red-800"></i>
-                    <i
-                        class="fa-brands fa-youtube text-gray-500 hover:-translate-y-1 transition-all duration-[400ms] hover:text-red-800"></i>
-                    <i
-                        class="fa-brands fa-instagram text-gray-500 hover:-translate-y-1 transition-all duration-[400ms] hover:text-red-800"></i>
-                    <i
-                        class="fa-brands fa-linkedin text-gray-500 hover:-translate-y-1 transition-all duration-[400ms] hover:text-red-800"></i>
+                    <i class="fa-brands fa-facebook text-gray-500 hover:-translate-y-1 transition-all duration-[400ms] hover:text-red-800"></i>
+                    <i class="fa-brands fa-youtube text-gray-500 hover:-translate-y-1 transition-all duration-[400ms] hover:text-red-800"></i>
+                    <i class="fa-brands fa-instagram text-gray-500 hover:-translate-y-1 transition-all duration-[400ms] hover:text-red-800"></i>
+                    <i class="fa-brands fa-linkedin text-gray-500 hover:-translate-y-1 transition-all duration-[400ms] hover:text-red-800"></i>
                 </div>
             </div>
-            </div>
-            <div class="relative">
-                <div
-                    class=" absolute -top-[22rem] left-[20rem] h-72 w-72 rounded-full border-2 border-gray-200/20 flex justify-center items-center">
-                    <div class="h-36 w-36 rounded-full border-2 border-gray-200/20">
-                    </div>
+            <div class="relative hidden md:block">
+                <div class="absolute -top-[22rem] left-[20rem] h-72 w-72 rounded-full border-2 border-gray-200/20 flex justify-center items-center">
+                    <div class="h-36 w-36 rounded-full border-2 border-gray-200/20"></div>
                 </div>
             </div>
-            <div class="relative">
-                <div class="absolute -top-2 left-7 w-72 h-72 rounded-full  bg-red-200/40 z-0"></div>
-                <div class="absolute -bottom-1 -right-1 w-72 h-72 rounded-full  bg-red-200/30"></div>
-                <img src="/square-image.jpg" alt=""
-                    class="relative w-80 h-80 rounded-full object-cover border-2 border-red-800/60 p-2 z-9">
-
-            </div>
-
+            <div class="relative mt-10 md:mt-0">
+                <div class="absolute -top-2 left-7 w-48 h-48 md:w-72 md:h-72 rounded-full bg-red-200/40 z-0"></div>
+                <div class="absolute -bottom-1 -right-1 w-48 h-48 md:w-72 md:h-72 rounded-full bg-red-200/30"></div>
+                <img src="square-image.jpg" alt="" class="relative w-48 h-48 md:w-80 md:h-80 rounded-full object-cover border-2 border-red-800/60 p-2 z-9">
             </div>
         </section>
-        <section id="about_me"
-            class="about bg-white mt-[7rem] flex justify-center items-center gap-[15rem] pt-[5rem] pb-[5rem]">
+        <section id="about_me" class="about bg-white mt-16 md:mt-[7rem] flex flex-col md:flex-row justify-center items-center gap-10 md:gap-[15rem] py-16 px-6 md:px-0">
             <div>
                 <span class="text-gray-500 flex items-center gap-3 text-sm">
                     <hr class="w-8 border-t-2 border-red-800 who">WHO I AM
                 </span>
-                <h1 class="h1_about text-6xl h1_hero w-[30px] mt-5 ">
+                <h1 class="h1_about text-4xl md:text-6xl h1_hero mt-5">
                     About <span class="about_span_me">me</span>
                 </h1>
             </div>
-            <div class="w-[700px] about_text ">
-                <div class="abt_part_one text-gray-600 "></div>
-                <div class="abt_part_two  text-gray-600 mt-[2rem] border-b-2 pb-3"></div>
-                <div class="flex  items-center gap-10 overview mt-7">
-                </div>
+            <div class="w-full md:w-[700px] about_text">
+                <div class="abt_part_one text-gray-600"></div>
+                <div class="abt_part_two text-gray-600 mt-8 border-b-2 pb-3"></div>
+                <div class="flex flex-wrap items-center gap-6 md:gap-10 overview mt-7"></div>
             </div>
         </section>
-        <section class="mt-[6rem] learning">
+        <section class="mt-16 md:mt-[6rem] learning px-4 md:px-0">
             <div class="flex flex-col justify-center items-center">
                 <span class="text-gray-500 flex items-center gap-3 text-sm learning_title">
                     <hr class="w-8 border-t-2 border-red-800">LEARNING
                     <hr class="w-8 border-t-2 border-red-800">
                 </span>
-                <h1 class="h1_learning text-6xl h1_hero mt-5 w-[500px] text-center">Courses <span
-                        class="span_learning">online</span> and offline</h1>
+                <h1 class="h1_learning text-3xl sm:text-4xl md:text-6xl h1_hero mt-5 w-full md:w-[500px] text-center">
+                    Courses <span class="span_learning">online</span> and offline
+                </h1>
             </div>
-            <div class="learning_courses flex justify-center items-center gap-9">
-            </div>
-            <div class="mt-[3rem] flex flex-col justify-center items-center">
-                <a href="#" class="text-red-800 text-sm courses_view cursor-pointer">VIEW ALL COURSES<i
-                        class="fa-solid fa-arrow-right text-red-800 text-[0.7rem] ml-1"></i></a>
-                <hr class="w-[9.3rem] border-t-2 border-red-800 ">
+            <div class="learning_courses flex flex-wrap justify-center items-center gap-6 md:gap-9 mt-8 md:mt-0"></div>
+            <div class="mt-10 md:mt-[3rem] flex flex-col justify-center items-center">
+                <a href="#" class="text-red-800 text-sm courses_view cursor-pointer">VIEW ALL COURSES
+                    <i class="fa-solid fa-arrow-right text-red-800 text-[0.7rem] ml-1"></i>
+                </a>
+                <hr class="w-[9.3rem] border-t-2 border-red-800">
             </div>
         </section>
-        <section class="experiences mt-[6rem] pt-[6rem] pb-[6rem]">
-            <div class="ml-[6.1rem]">
-                <span class="text-gray-500 flex items-center text-sm gap-3 mb-4 font-semibold ml-[6.5rem]">
+        <section class="experiences mt-16 md:mt-[6rem] pt-10 md:pt-[6rem] pb-10 md:pb-[6rem] px-4 md:px-0">
+            <div class="ml-0 md:ml-[6.1rem]">
+                <span class="text-gray-500 flex items-center text-sm gap-3 mb-4 font-semibold ml-0 md:ml-[6.5rem]">
                     <hr class="w-8 border-t-2 border-red-800 backgound_exp">BACKGROUND
                 </span>
-                <h1 class="h1_learning text-6xl h1_hero mt-5 w-[500px] text-center">Experience</h1>
+                <h1 class="h1_learning text-3xl sm:text-4xl md:text-6xl h1_hero mt-5 w-full md:w-[500px] text-center">Experience</h1>
             </div>
-            <div class=" all_experiences flex justify-center items-center gap-8 mt-[4rem] ">
-            </div>
+            <div class="all_experiences flex flex-wrap justify-center items-center gap-6 md:gap-8 mt-10 md:mt-[4rem]"></div>
         </section>
     </main>
-    <footer class="bg-[#b91c1c] text-white flex flex-col justify-center items-center pb-[4rem]">
-        <h1 class="ready text-4xl font-bold mt-[4rem]">Ready to collaborate?</h1>
-        <p class=" p_footer text-sm pt-4 pb-6 text-white/70">Whether you're looking for a course, a consultation, or a translation – let's talk.</p>
-         <button class="touch  cursor-pointer rounded-3xl py-1 px-4 border-2 border-white hover:text-red-700 hover:bg-white transition-all duration-300"><a href="#">GET IN TOUCH</a></button>
+    <footer class="bg-[#b91c1c] text-white flex flex-col justify-center items-center pb-16 px-4">
+        <h1 class="ready text-2xl md:text-4xl font-bold mt-12 md:mt-16 text-center">Ready to collaborate?</h1>
+        <p class="p_footer text-xs md:text-sm pt-4 pb-6 text-white/70 w-full sm:w-[350px] md:w-auto text-center">
+            Whether you're looking for a course, a consultation, or a translation – let's talk.
+        </p>
+        <button class="touch cursor-pointer rounded-3xl py-1 px-4 border-2 border-white hover:text-red-700 hover:bg-white transition-all duration-300">
+            <a href="#">GET IN TOUCH</a>
+        </button>
     </footer>
-
-    <script src="/tokimahery.data.js"></script>
+    <script src="./tokimahery.data.js"></script>
     <script src="main.js"></script>
-
 </body>
 
 </html>

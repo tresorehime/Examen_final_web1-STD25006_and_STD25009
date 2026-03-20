@@ -39,24 +39,36 @@ window.onload = function () {
     const col1 = data.experiences.slice(0, 2);
     const col2 = data.experiences.slice(2, 4);
 
-    const experiences = (exp, index) => {
-        return `
-        <div class="${index > 0 ? 'pt-8' : ''} group ">
-            <span class="year text-red-800 font-semibold">${exp.year.toUpperCase()}</span>
-            <h1 class="role text-xl pt-2 pb-3 font-semibold">${exp.role}</h1>
-            <span class="org text-gray-500 block w-[500px] text-sm">${exp.org.toUpperCase()}</span>
-            <p class="desc pt-2 text-gray-700 text-sm w-[500px]">${exp.desc}</p>
-        </div>
-    `;
-    };
+    const experiences = (exp, index) => `
+    <div class="${index > 0 ? 'pt-8' : ''} group">
+        <span class="year text-red-800 font-semibold">${exp.year.toUpperCase()}</span>
+        <h1 class="role text-xl pt-2 pb-3 font-semibold">${exp.role}</h1>
+        <span class="org text-gray-500 block text-sm exp_text">${exp.org.toUpperCase()}</span>
+        <p class="desc pt-2 text-gray-700 text-sm exp_text">${exp.desc}</p>
+    </div>
+`;
+
     expContainer.innerHTML = `
-    <div class="border-l-2  pr-6  ">
+    <div class="exp_col border-l-2 pr-6">
         ${col1.map((exp, i) => experiences(exp, i)).join('')}
     </div>
-    <div class="border-l-2  pr-6 ">
+    <div class="exp_col border-l-2 pr-6">
         ${col2.map((exp, i) => experiences(exp, i)).join('')}
     </div>
 `;
+
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        mobileMenu.classList.toggle('flex');
+
+        const icon = menuBtn.querySelector('i');
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-xmark');
+
+    });
 };
 
 

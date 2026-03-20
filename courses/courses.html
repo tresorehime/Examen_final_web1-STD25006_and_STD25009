@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/output.css">
+    <link rel="stylesheet" href="courses.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="flex gap-[15rem] items-center md:justify-center md:gap-80 bg-[#991b1b] navbar py-1">
+        <img src="../logo.png" alt="" class="w-32 md:w-52 ">
+        <nav id="mainNav" class="hidden md:flex items-center gap-6 font_body">
+            <ul class="flex flex-col md:flex-row items-center gap-4 md:gap-6 text-white text-md">
+                <li><a href="../index.html" class="nav_link">HOME</a></li>
+                <li><a href="../blog/blog.html" class="nav_link">BLOG</a></li>
+                <li><a href="courses.html" class="nav_link">COURSES</a></li>
+                <li><a href="../testimonials/testimonials.html" class="nav_link">TESTIMONIALS</a></li>
+                <li><a href="../research/research.html" class="nav_link">RESEARCH</a></li>
+            </ul>
+        </nav>
+        <div class="hidden md:flex items-center gap-3">
+            <input type="text" placeholder="search anything..."
+                class="input_nav bg-[#991b1b] placeholder-gray-200 text-sm">
+            <i class="fa-solid fa-basket-shopping text-2xl text-white"></i>
+        </div>
+        <button id="menuBtn" class="md:hidden text-white text-2xl">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </header>
+    <div id="mobileMenu" class="hidden flex-col items-center gap-4 py-6 bg-[#7f1d1d] md:hidden ">
+        <ul class="flex flex-col items-center gap-4 text-white text-sm pt-[3rem]">
+            <li><a href="../index.html" class="nav_link">HOME</a></li>
+            <li><a href="../blog/blog.html" class="nav_link">BLOG</a></li>
+            <li><a href="courses.html" class="nav_link">COURSES</a></li>
+            <li><a href="../testimonials/testimonials.html" class="nav_link">TESTIMONIALS</a></li>
+            <li><a href="../research/research.html" class="nav_link">RESEARCH</a></li>
+        </ul>
+        <div class="flex items-center gap-3 mt-2">
+            <input type="text" placeholder="search anything..."
+                class="bg-[#7f1d1d] placeholder-gray-200 text-sm text-white border-b border-white/30 outline-none px-2 py-1">
+            <i class="fa-solid fa-basket-shopping text-xl text-white"></i>
+        </div>
+    </div>
+    <main>
+        <section class="flex justify-center items-center flex-col px-4 pt-6">
+            <span class="text-gray-500 flex items-center gap-3 text-sm justify-center font_body">
+                <hr class="w-8 border-t-2 border-red-800">LEARNING
+                <hr class="w-8 border-t-2 border-red-800">
+            </span>
+            <h1 class="text-4xl md:text-6xl font_title pt-8 font-semibold pb-5 text-center">
+                All <span class="text-red-800 italic">courses</span>
+            </h1>
+            <p class="text-gray-600 w-full md:w-[500px] font_body text-sm md:text-base text-center">
+                Online and offline courses across development, translation, and research.
+                Find the one that fits your level and goals.
+            </p>
+        </section>
+
+        <section class="bg-white function_container flex justify-center items-center flex-col">
+
+            <section class="function_board rounded-lg w-full max-w-6xl px-4 md:px-8">
+                <div
+                    class="flex flex-col md:flex-row flex-wrap justify-center items-start md:items-center gap-6 md:gap-8">
+
+                
+                    <div class="flex flex-col items-start md:items-center">
+                        <label class="block mb-2 text-gray-400 text-xs font_body pb-4">LANGUAGE</label>
+                        <div class="flex gap-3 items-center">
+                            <img src="https://purecatamphetamine.github.io/country-flag-icons/3x2/MG.svg"
+                                class="img_flag cursor-pointer hover:opacity-70 transition" />
+                            <img src="https://purecatamphetamine.github.io/country-flag-icons/3x2/FR.svg"
+                                class="img_flag cursor-pointer hover:opacity-70 transition" />
+                            <img src="https://purecatamphetamine.github.io/country-flag-icons/3x2/US.svg"
+                                class="img_flag cursor-pointer hover:opacity-70 transition" />
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-start">
+                        <label class="block mb-2 text-gray-400 text-xs font_body">TECHNOLOGY</label>
+                        <select id="filter_tech" class="font_body w-full">
+                            <option value="">All technologies</option>
+                            <option value="javascript">JavaScript</option>
+                            <option value="java">Java</option>
+                            <option value="sql">SQL</option>
+                        </select>
+                    </div>
+                    <div class="flex flex-col items-start">
+                        <label class="block mb-2 text-gray-400 text-xs font_body">LEVEL</label>
+                        <select id="filter_level" class="font_body w-full">
+                            <option value="">All levels</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </div>
+                    <div class="flex flex-col items-start w-full md:w-auto">
+                        <div class="flex gap-3 items-center mb-1">
+                            <label class="text-gray-400 text-xs font_body">PRICE RANGE</label>
+                            <span id="price_label" class="text-xs text-red-800 font-medium font_body">0 Ar – 300 000
+                                Ar</span>
+                        </div>
+                        <div class="range-wrapper flex flex-col w-full md:w-44">
+                            <input type="range" min="0" max="300000" value="0" class="mt-2 w-full" id="min_range" />
+                            <input type="range" min="0" max="300000" value="300000" class="mt-1 w-full"
+                                id="max_range" />
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-start w-full md:w-44">
+                        <label class="block mb-2 font_body text-gray-400 text-xs">SEARCH</label>
+                        <input id="filter_search" type="text" placeholder="Keywords..." class="search_courses w-full" />
+                    </div>
+
+                    <div class="flex items-end pb-1">
+                        <button id="clear_filters"
+                            class="text-xs text-gray-400 hover:text-red-800 uppercase tracking-widest font-medium transition">
+                            CLEAR ALL
+                        </button>
+                    </div>
+
+                </div>
+            </section>
+            <section class="w-full max-w-6xl mx-auto pb-20 mt-8 border-t-2 px-4 md:px-10 py-4">
+                <p id="results_count" class="text-xs text-gray-400 uppercase tracking-widest font_body mb-6">
+                    9 COURSES FOUND
+                </p>
+                <div id="courses_grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                </div>
+            </section>
+
+        </section>
+
+    </main>
+    <footer class="bg-[#b91c1c] text-white flex flex-col justify-center items-center pb-16 px-4">
+        <h1 class="ready text-2xl md:text-4xl font-bold mt-12 md:mt-16 text-center">Not sure where to start?</h1>
+        <p class="p_footer text-xs md:text-sm pt-4 pb-6 text-white/70 w-full sm:w-[350px] md:w-auto text-center">
+            Book a free discoverycall and find thr course that fits your goals and schedule.
+        </p>
+        <button
+            class="touch cursor-pointer rounded-3xl py-1 px-4 border-2 border-white hover:text-red-700 hover:bg-white transition-all duration-300">
+            <a href="#">GET IN TOUCH</a>
+        </button>
+    </footer>
+    <script src="../tokimahery.data.js"></script>
+    <script src="courses.js"></script>
+</body>
+
+</html>

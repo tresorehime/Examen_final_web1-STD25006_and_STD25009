@@ -2,7 +2,7 @@
   background: white;
   border-radius: 8px;
   padding: 1.5rem;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.08), 1px 0 3px rgba(0,0,0,0.03), -1px 0 3px rgba(0,0,0,0.03);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08), 1px 0 3px rgba(0, 0, 0, 0.03), -1px 0 3px rgba(0, 0, 0, 0.03);
   margin-bottom: 1rem;
   min-height: 180px;
 }
@@ -31,6 +31,7 @@
   align-items: center;
   gap: 8px;
 }
+
 .sidebar-label::before {
   content: '';
   display: inline-block;
@@ -64,12 +65,17 @@
   color: #374151;
   background: white;
 }
+
 .page-btn.active {
   background: #b91c1c;
   color: white;
   border-color: #b91c1c;
 }
-.page-btn:hover:not(.active) { background: #f3f4f6; }
+
+.page-btn:hover:not(.active) {
+  background: #f3f4f6;
+}
+
 .page-nav {
   font-size: 0.85rem;
   color: #6b7280;

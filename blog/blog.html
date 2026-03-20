@@ -10,40 +10,35 @@
   <link rel="stylesheet" href="../src/output.css" />
   <link rel="stylesheet" href="blog.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-
 </head>
 <body class="bg-white text-[#1a1a1a]">
-  <header class="flex lg:justify-center lg:items-center lg:gap-80 bg-[#991b1b] navbar">
 
-
-    <img src="../logo.png" alt="" class="hidden lg:block w-52">
-    <nav class="hidden lg:block">
-      <ul class="flex items-center gap-6 text-white text-md">
+  <header class="flex gap-[15rem] items-center md:justify-center md:gap-80 bg-[#991b1b] navbar py-1">
+    <img src="../logo.png" alt="" class="w-32 md:w-52">
+    <nav class="hidden md:flex items-center gap-6">
+      <ul class="flex flex-col md:flex-row items-center gap-4 md:gap-6 text-white text-md">
         <li><a href="../index.html" class="nav_link">HOME</a></li>
         <li><a href="../blog/blog.html" class="nav_link">BLOG</a></li>
         <li><a href="#" class="nav_link">COURSES</a></li>
-        <li><a href="#" class="nav_link">TESTIMONIALS</a></li>
+        <li><a href="../testimonials/testimonials.html" class="nav_link">TESTIMONIALS</a></li>
         <li><a href="../research/research.html" class="nav_link">RESEARCH</a></li>
       </ul>
     </nav>
-    <div class="hidden lg:flex items-center gap-4">
+    <div class="hidden md:flex items-center gap-3">
       <input type="text" placeholder="search anything..." class="input_nav bg-[#991b1b] placeholder-gray-200 text-sm">
       <i class="fa-solid fa-basket-shopping text-2xl text-white"></i>
     </div>
-
-
-    <div class="lg:hidden flex justify-between items-center px-5 w-full">
-      <img src="../logo.png" alt="" class="w-36">
+    <div class="md:hidden flex justify-between items-center px-5 w-full">
+      <img src="../logo.png" alt="" class="w-32">
       <button id="burger-btn" class="text-white text-2xl">
         <i class="fa-solid fa-bars"></i>
       </button>
     </div>
-
   </header>
 
   <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full bg-[#991b1b] z-50 flex-col px-5 py-4 gap-3">
     <div class="flex justify-between items-center mb-3">
-      <img src="../logo.png" alt="" class="w-36">
+      <img src="../logo.png" alt="" class="w-32">
       <button id="close-btn" class="text-white text-2xl">
         <i class="fa-solid fa-xmark"></i>
       </button>
@@ -54,9 +49,9 @@
     </div>
     <ul class="flex flex-col gap-3 text-white text-sm">
       <li><a href="../index.html" class="nav_link">HOME</a></li>
-      <li><a href="#" class="nav_link">BLOG</a></li>
+      <li><a href="../blog/blog.html" class="nav_link">BLOG</a></li>
       <li><a href="#" class="nav_link">COURSES</a></li>
-      <li><a href="#" class="nav_link">TESTIMONIALS</a></li>
+      <li><a href="../testimonials/testimonials.html" class="nav_link">TESTIMONIALS</a></li>
       <li><a href="../research/research.html" class="nav_link">RESEARCH</a></li>
     </ul>
   </div>
@@ -67,34 +62,28 @@
     <p id="hero-sub" class="font-serif-body text-gray-500 text-base max-w-xs mx-auto"></p>
   </section>
 
-  <div class="w-full px-10 lg:px-24 py-10 flex flex-col lg:flex-row gap-10">
-
+  <div class="w-full px-4 lg:px-24 py-10 flex flex-col lg:flex-row gap-10">
     <main class="flex-1 min-w-0">
       <div id="post-list"></div>
       <div id="pagination" class="flex items-center justify-center gap-2 mt-10"></div>
     </main>
-
     <aside class="w-full lg:w-[360px] lg:flex-shrink-0 space-y-6">
-
       <div class="sidebar-block">
         <p class="sidebar-label mb-4">Archives</p>
         <ul id="archives-list" class="space-y-2 text-sm text-gray-600"></ul>
       </div>
-
       <div class="sidebar-block">
         <p class="sidebar-label mb-4">Newsletter</p>
         <p id="newsletter-sub" class="text-sm text-gray-500 mb-3"></p>
         <input type="email" placeholder="your@email.com" class="w-full border border-gray-300 px-3 py-2 text-sm mb-2 rounded-lg" />
         <button class="w-full bg-red-700 text-white text-sm font-medium tracking-widest uppercase py-2 rounded-lg">Subscribe</button>
       </div>
-
       <div class="sidebar-block">
         <p class="sidebar-label mb-4">On YouTube</p>
         <p id="youtube-sub" class="text-sm text-gray-500 mb-4"></p>
         <div id="youtube-list" class="space-y-4"></div>
         <a id="youtube-all" href="#" class="inline-block mt-4 text-sm text-red-700 font-medium tracking-wide uppercase underline underline-offset-2"></a>
       </div>
-
     </aside>
   </div>
 
