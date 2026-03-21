@@ -1,57 +1,62 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>T. Ramarozaka — Contact</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Source+Serif+4:wght@400;600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Source+Serif+4:wght@400;600&family=DM+Sans:wght@400;500&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="../src/input.css" />
   <link rel="stylesheet" href="../src/output.css" />
   <link rel="stylesheet" href="contact.css" />
 </head>
+
 <body class="bg-white text-[#1a1a1a] overflow-x-hidden">
 
   <header class="flex flex-wrap items-center justify-between px-4 md:px-10 bg-[#991b1b] navbar py-1 font_body">
-    <img src="../logo.png" alt="" class="w-32 md:w-52">
+    <a href="../index.html"><img src="../logo.png" alt="" class="w-32 md:w-52"></a>
     <nav id="mainNav" class="hidden md:flex items-center gap-6">
-        <ul class="flex flex-col md:flex-row items-center gap-4 md:gap-6 text-white text-md">
-            <li><a href="../index.html" class="nav_link">HOME</a></li>
-            <li><a href="../blog/blog.html" class="nav_link">BLOG</a></li>
-            <li><a href="../courses/courses.html" class="nav_link">COURSES</a></li>
-            <li><a href="../testimonials/testimonials.html" class="nav_link">TESTIMONIALS</a></li>
-            <li><a href="../research/research.html" class="nav_link">RESEARCH</a></li>
-            <li><a href="../contact/contact.html" class="nav_link">CONTACT</a></li>
-        </ul>
-    </nav>
-    <div class="hidden md:flex items-center gap-3">
-        <input type="text" placeholder="search anything..." class="input_nav bg-[#991b1b] placeholder-gray-200 text-sm">
-        <i class="fa-solid fa-basket-shopping text-2xl text-white"></i>
-    </div>
-    <button id="menuBtn" class="md:hidden text-white text-2xl">
-    <i class="fa-solid fa-bars"></i>
-</button>
-<button id="close-btn" class="md:hidden text-white text-2xl hidden">
-    <i class="fa-solid fa-xmark"></i>
-</button>
-
-<div id="mobileMenu" class="hidden basis-full w-full z-50 flex-col gap-4 py-6  bg-[#991b1b] font_body px-4">
-
-    <ul class="flex flex-col gap-4 text-white text-sm ">
+      <ul class="flex flex-col md:flex-row items-center gap-4 md:gap-6 text-white text-md">
         <li><a href="../index.html" class="nav_link">HOME</a></li>
         <li><a href="../blog/blog.html" class="nav_link">BLOG</a></li>
         <li><a href="../courses/courses.html" class="nav_link">COURSES</a></li>
         <li><a href="../testimonials/testimonials.html" class="nav_link">TESTIMONIALS</a></li>
         <li><a href="../research/research.html" class="nav_link">RESEARCH</a></li>
         <li><a href="../contact/contact.html" class="nav_link">CONTACT</a></li>
-    </ul>
-    <div class="flex items-center justify-between mt-4 gap-6">
-        <input type="text" placeholder="search anything..." class="flex-1 bg-[#7f1d1d] placeholder-gray-200 text-sm text-white border-b border-white/30 outline-none px-2 py-1">
-        <i class="fa-solid fa-basket-shopping text-xl text-white pl-3"></i>
+      </ul>
+    </nav>
+    <div class="hidden md:flex items-center gap-3">
+      <input type="text" placeholder="search anything..." class="input_nav bg-[#991b1b] placeholder-gray-200 text-sm">
+      <i class="fa-solid fa-basket-shopping text-2xl text-white"></i>
     </div>
-</div>
-</header>
+    <button id="menuBtn" class="md:hidden text-white text-2xl">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <button id="close-btn" class="md:hidden text-white text-2xl hidden">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <div id="mobileMenu" class="hidden basis-full w-full z-50 flex-col gap-4 py-6  bg-[#991b1b] font_body px-4">
+
+      <ul class="flex flex-col gap-4 text-white text-sm ">
+        <li><a href="../index.html" class="nav_link">HOME</a></li>
+        <li><a href="../blog/blog.html" class="nav_link">BLOG</a></li>
+        <li><a href="../courses/courses.html" class="nav_link">COURSES</a></li>
+        <li><a href="../testimonials/testimonials.html" class="nav_link">TESTIMONIALS</a></li>
+        <li><a href="../research/research.html" class="nav_link">RESEARCH</a></li>
+        <li><a href="../contact/contact.html" class="nav_link">CONTACT</a></li>
+      </ul>
+      <div class="flex items-center justify-between mt-4 gap-6">
+        <input type="text" placeholder="search anything..."
+          class="flex-1 bg-[#7f1d1d] placeholder-gray-200 text-sm text-white border-b border-white/30 outline-none px-2 py-1">
+        <i class="fa-solid fa-basket-shopping text-xl text-white pl-3"></i>
+      </div>
+    </div>
+  </header>
 
   <div class="contact-page">
     <div class="contact-wrapper">
@@ -93,22 +98,52 @@
 
   <section class="py-20 px-8 bg-[#f9f6f1]">
     <div class="max-w-5xl mx-auto">
-      <p id="reasons-label" class="label-line text-xs font-medium tracking-widest uppercase text-gray-500 mb-5 text-center"></p>
+      <p id="reasons-label"
+        class="label-line text-xs font-medium tracking-widest uppercase text-gray-500 mb-5 text-center"></p>
       <h2 id="reasons-title" class="font-display text-4xl font-bold text-center mb-14"></h2>
       <div id="reasons-list" class="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
     </div>
   </section>
 
+
+  <section class="py-16 px-8 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <p id="avail-label" class="text-xs font-medium tracking-widest uppercase text-gray-500 mb-5 text-center"></p>
+      <h2 id="avail-title" class="font-display text-4xl font-bold text-center mb-14"></h2>
+      <div id="avail-list" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+    </div>
+  </section>
+
+  <section class="py-16 px-8 bg-[#f9f6f1]">
+    <div class="max-w-5xl mx-auto text-center">
+      <p id="social-label" class="text-xs font-medium tracking-widest uppercase text-gray-500 mb-5"></p>
+      <h2 id="social-title" class="font-display text-4xl font-bold mb-10"></h2>
+      <div id="social-list" class="flex justify-center gap-6 flex-wrap"></div>
+    </div>
+  </section>
+
+
+  <section class="py-16 px-8 bg-white">
+    <div class="max-w-3xl mx-auto">
+      <p id="faq-label" class="text-xs font-medium tracking-widest uppercase text-gray-500 mb-5 text-center"></p>
+      <h2 id="faq-title" class="font-display text-4xl font-bold text-center mb-10"></h2>
+      <div id="faq-list" class="flex flex-col gap-4"></div>
+    </div>
+  </section>
+
   <section class="bg-[#b91c1c] text-white text-center py-20 px-6">
-    <h2 id="cta-title" class="font-display text-4xl font-bold italic mb-3"></h2>
+    <h2 id="cta-title" class="font-display text-4xl font-bold font_title mb-3"></h2>
     <p id="cta-sub" class="text-red-200 mb-8 max-w-md mx-auto text-sm"></p>
     <a id="cta-btn" href="#"
       class="inline-block border border-white text-white px-8 py-3 text-sm font-medium tracking-widest uppercase rounded-full hover:bg-white hover:text-[#b91c1c] transition-colors duration-200">
     </a>
   </section>
 
+
+
   <script src="../tokimahery.data.js"></script>
   <script src="contact.js"></script>
   <script src="../navbar.js"></script>
 </body>
+
 </html>

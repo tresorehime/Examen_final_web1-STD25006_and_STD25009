@@ -30,7 +30,36 @@ const contactData = {
     title: 'Still hesitating?',
     sub: "There's no wrong reason to reach out. Let's start a conversation.",
     btn: 'Write to me',
-  }
+  },
+
+  availability: {
+    label: 'Availability',
+    title: 'When to reach me',
+    items: [
+      { icon: 'fa-solid fa-clock', title: 'Response time', desc: 'Usually responds within 24 hours on working days.' },
+      { icon: 'fa-solid fa-calendar-check', title: 'Working hours', desc: 'Monday to Friday, 9:00 AM – 5:00 PM EAT (UTC+3).' },
+      { icon: 'fa-solid fa-globe', title: 'Remote friendly', desc: 'Available for remote consultations worldwide via video call.' },
+    ]
+  },
+  socials: {
+    label: 'Find me online',
+    title: 'Let\'s connect',
+    items: [
+      { icon: 'fa-brands fa-linkedin', label: 'LinkedIn', href: 'https://linkedin.com' },
+      { icon: 'fa-brands fa-github', label: 'GitHub', href: 'https://github.com' },
+      { icon: 'fa-brands fa-youtube', label: 'YouTube', href: 'https://youtube.com' }
+    ]
+  },
+  faq: {
+    label: 'FAQ',
+    title: 'Common questions',
+    items: [
+      { q: 'How much does a consultation cost?', a: 'Rates vary depending on the type and duration. Reach out for a custom quote.' },
+      { q: 'How quickly do you respond?', a: 'I typically reply within 24 hours on weekdays.' },
+      { q: 'Do you offer group training?', a: 'Yes, I offer both individual and group sessions, online and offline.' },
+      { q: 'Can we collaborate on research?', a: 'Absolutely. I am open to co-authoring and research partnerships.' },
+    ]
+  },
 };
 
 
@@ -117,3 +146,79 @@ fillCard();
 fillForm();
 fillReasons();
 fillCTA();
+
+
+function fillAvailability() {
+  document.getElementById('avail-label').textContent = contactData.availability.label;
+  document.getElementById('avail-title').textContent = contactData.availability.title;
+
+  const list = document.getElementById('avail-list');
+  contactData.availability.items.forEach(item => {
+    const card = document.createElement('div');
+    card.className = 'reason-card';
+
+    const icon = document.createElement('div');
+    icon.className = 'reason-icon';
+    icon.innerHTML = `<i class="${item.icon}"></i>`;
+
+    const title = document.createElement('p');
+    title.className = 'reason-title';
+    title.textContent = item.title;
+
+    const desc = document.createElement('p');
+    desc.className = 'reason-desc';
+    desc.textContent = item.desc;
+
+    card.append(icon, title, desc);
+    list.appendChild(card);
+  });
+}
+
+function fillSocials() {
+  document.getElementById('social-label').textContent = contactData.socials.label;
+  document.getElementById('social-title').textContent = contactData.socials.title;
+
+  const list = document.getElementById('social-list');
+  contactData.socials.items.forEach(item => {
+    const a = document.createElement('a');
+    a.href = item.href;
+    a.target = '_blank';
+    a.className = 'social-btn';
+
+    const icon = document.createElement('i');
+    icon.className = item.icon + ' text-2xl';
+
+    const label = document.createElement('span');
+    label.className = 'text-sm font-medium';
+    label.textContent = item.label;
+
+    a.append(icon, label);
+    list.appendChild(a);
+  });
+}
+
+function fillFAQ() {
+  document.getElementById('faq-label').textContent = contactData.faq.label;
+  document.getElementById('faq-title').textContent = contactData.faq.title;
+
+  const list = document.getElementById('faq-list');
+  contactData.faq.items.forEach(item => {
+    const div = document.createElement('div');
+    div.className = 'faq-item';
+
+    const q = document.createElement('p');
+    q.className = 'faq-question';
+    q.textContent = item.q;
+
+    const a = document.createElement('p');
+    a.className = 'faq-answer';
+    a.textContent = item.a;
+
+    div.append(q, a);
+    list.appendChild(div);
+  });
+}
+
+fillAvailability();
+fillSocials();
+fillFAQ();
