@@ -295,3 +295,34 @@
   font-family: 'Playfair Display', serif;
 }
 
+.field-error {
+  font-size: 0.72rem;
+  color: #b91c1c;
+  margin-top: 0.25rem;
+}
+
+.form-input.invalid {
+  border-color: #b91c1c;
+  background: #fff5f5;
+}
+
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #105529;
+  color: white;
+  padding: 0.875rem 2rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-family: 'DM Sans', sans-serif;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  z-index: 100;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.toast.fade-out {
+  opacity: 0;
+}

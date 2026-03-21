@@ -229,3 +229,48 @@ fillAvailability();
 fillSocials();
 fillFAQ();
 fillHero();
+
+document.getElementById('contact-form').addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const fields = [
+    { id: 'input-name',    label: 'Full name' },
+    { id: 'input-email',   label: 'Email address' },
+    { id: 'input-subject', label: 'Subject' },
+    { id: 'input-message', label: 'Message' },
+  ];
+
+
+  document.querySelectorAll('.field-error').forEach(el => el.remove());
+  document.querySelectorAll('.form-input.invalid').forEach(el => el.classList.remove('invalid'));
+
+  let valid = true;
+
+  fields.forEach(({ id, label }) => {
+    const input = document.getElementById(id);
+    if (!input.value.trim()) {
+      valid = false;
+      input.classList.add('invalid');
+      const err = document.createElement('p');
+      err.className = 'field-error';
+      err.textContent = `${label} is required.`;
+      input.parentNode.appendChild(err);
+    }
+  });
+
+  if (!valid) return;
+
+  fields.forEach(({ id }) => {
+    document.getElementById(id).value = '';
+  });
+
+  const toast = document.createElement('div');
+  toast.className = 'toast';
+  toast.textContent = 'Thank you for reaching out! I will get back to you as soon as possible.';
+  document.body.appendChild(toast);
+
+  setTimeout(() => {
+    toast.classList.add('fade-out');
+    setTimeout(() => toast.remove(), 400);
+  }, 4000);
+});
