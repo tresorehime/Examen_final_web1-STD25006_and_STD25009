@@ -155,4 +155,26 @@ window.onload = function () {
         filterCoursesTech();
 
     });
+    
+    document.getElementById('filter_search').addEventListener('input', e => {
+        filterCoursesSearch(e.target.value);
+    });
+    
+    function filterCoursesSearch(keyword) {
+        const kw = keyword.toLowerCase().trim();
+        if (!kw) {
+            renderCards(data.courses);
+            return;
+        }
+        const filtered = data.courses.filter(c => {
+            return (
+                c.title.toLowerCase().includes(kw) ||
+                c.description.toLowerCase().includes(kw) ||
+                c.level.toLowerCase().includes(kw) ||
+                c.language.toLowerCase().includes(kw) ||
+                c.technologies.some(t => t.toLowerCase().includes(kw))
+            );
+        });
+        renderCards(filtered);
+    }
 }
