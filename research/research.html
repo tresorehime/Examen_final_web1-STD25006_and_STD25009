@@ -14,47 +14,52 @@
 </head>
 
 <body class="bg-[#ffffff] text-[#1a1a1a]">
-    <header class="flex items-center justify-between px-6 md:px-10 bg-[#991b1b] navbar py-1 font_body">
-        <img src="../logo.png" alt="" class="w-32 md:w-52">
-        <nav id="mainNav" class="hidden md:flex items-center gap-6">
-            <ul class="flex flex-col md:flex-row items-center gap-4 md:gap-6 text-white text-md">
-                <li><a href="../index.html" class="nav_link">HOME</a></li>
-                <li><a href="../blog/blog.html" class="nav_link">BLOG</a></li>
-                <li><a href="../courses/courses.html" class="nav_link">COURSES</a></li>
-                <li><a href="../testimonials/testimonials.html" class="nav_link">TESTIMONIALS</a></li>
-                <li><a href="#" class="nav_link">RESEARCH</a></li>
-                <li><a href="../contact/contact.html" class="nav_link">CONTACT</a></li>
-            </ul>
-        </nav>
-        <div class="hidden md:flex items-center gap-3">
-            <input type="text" placeholder="search anything..." class="input_nav bg-[#991b1b] placeholder-gray-200 text-sm">
-            <i class="fa-solid fa-basket-shopping text-2xl text-white"></i>
-        </div>
-        <button id="menuBtn" class="md:hidden text-white text-2xl">
-            <i class="fa-solid fa-bars"></i>
-        </button>
-    </header>
-    <div id="mobileMenu" class="hidden flex-col items-center gap-4 py-6 bg-[#7f1d1d] md:hidden font_body">
-        <ul class="flex flex-col items-center gap-4 text-white text-sm pt-[3rem]">
-            <li><a href="./index.html" class="nav_link">HOME</a></li>
-            <li><a href="./blog/blog.html" class="nav_link">BLOG</a></li>
-            <li><a href="./courses/courses.html" class="nav_link">COURSES</a></li>
-            <li><a href="./testimonials/testimonials.html" class="nav_link">TESTIMONIALS</a></li>
-            <li><a href="./research/research.html" class="nav_link">RESEARCH</a></li>
-            <li><a href="./contact/contact.html" class="nav_link">CONTACT</a></li>
+  <header class="flex flex-wrap items-center justify-between px-4 md:px-10 bg-[#991b1b] navbar py-1 font_body">
+    <img src="../logo.png" alt="" class="w-32 md:w-52">
+    <nav id="mainNav" class="hidden md:flex items-center gap-6">
+        <ul class="flex flex-col md:flex-row items-center gap-4 md:gap-6 text-white text-md">
+            <li><a href="../index.html" class="nav_link">HOME</a></li>
+            <li><a href="../blog/blog.html" class="nav_link">BLOG</a></li>
+            <li><a href="../courses/courses.html" class="nav_link">COURSES</a></li>
+            <li><a href="../testimonials/testimonials.html" class="nav_link">TESTIMONIALS</a></li>
+            <li><a href="../research/research.html" class="nav_link">RESEARCH</a></li>
+            <li><a href="../contact/contact.html" class="nav_link">CONTACT</a></li>
         </ul>
-        <div class="flex items-center gap-3 mt-2">
-            <input type="text" placeholder="search anything..." class="bg-[#7f1d1d] placeholder-gray-200 text-sm text-white border-b border-white/30 outline-none px-2 py-1">
-            <i class="fa-solid fa-basket-shopping text-xl text-white"></i>
-        </div>
+    </nav>
+    <div class="hidden md:flex items-center gap-3">
+        <input type="text" placeholder="search anything..." class="input_nav bg-[#991b1b] placeholder-gray-200 text-sm">
+        <i class="fa-solid fa-basket-shopping text-2xl text-white"></i>
     </div>
+    <button id="menuBtn" class="md:hidden text-white text-2xl">
+    <i class="fa-solid fa-bars"></i>
+</button>
+<button id="close-btn" class="md:hidden text-white text-2xl hidden">
+    <i class="fa-solid fa-xmark"></i>
+</button>
+
+<div id="mobileMenu" class="hidden basis-full w-full z-50 flex-col gap-4 py-6  bg-[#991b1b] font_body px-4">
+
+    <ul class="flex flex-col gap-4 text-white text-sm ">
+        <li><a href="../index.html" class="nav_link">HOME</a></li>
+        <li><a href="../blog/blog.html" class="nav_link">BLOG</a></li>
+        <li><a href="../courses/courses.html" class="nav_link">COURSES</a></li>
+        <li><a href="../testimonials/testimonials.html" class="nav_link">TESTIMONIALS</a></li>
+        <li><a href="../research/research.html" class="nav_link">RESEARCH</a></li>
+        <li><a href="../contact/contact.html" class="nav_link">CONTACT</a></li>
+    </ul>
+    <div class="flex items-center justify-between mt-4 gap-6">
+        <input type="text" placeholder="search anything..." class="flex-1 bg-[#7f1d1d] placeholder-gray-200 text-sm text-white border-b border-white/30 outline-none px-2 py-1">
+        <i class="fa-solid fa-basket-shopping text-xl text-white pl-3"></i>
+    </div>
+</div>
+</header>
 
   <main>
-    <section id="hero" class="text-center py-20 px-6 bg-[#fdf2f2]">
-      <p id="hero-label" class="label-line text-xs font-medium tracking-widest uppercase mb-6" style="color:#979592"></p>
+    <section id="hero" class="text-center py-16 px-6 bg-[#f9f6f1]">
+      <p id="hero-label" class="label-line text-xs font-medium uppercase mt-24 mb-8 text-gray-500"></p>
       <div class="flex flex-col items-center">
-        <h1 id="hero-title" class="font-display text-4xl md:text-6xl font-bold mb-4"></h1>
-        <p id="hero-sub" class="font-serif-body leading-relaxed text-base" style="color:#6b4444; text-align:justify"></p>
+        <h1 id="hero-title" class="font-display text-4xl md:text-6xl font-bold mt-2 mb-4"></h1>
+        <p id="hero-sub" class="font-serif-body leading-relaxed text-base text-justify text-[#6b4444]"></p>
       </div>
     </section>
 
