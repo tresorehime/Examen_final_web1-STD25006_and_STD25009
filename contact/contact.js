@@ -221,7 +221,7 @@ function fillFAQ() {
 }
 
 function fillHero() {
-  document.getElementById('hero-title').innerHTML = "Let's <span class='text-red-800 italic' style=\"font-family:'Playfair Display',serif\">talk.</span>";
+  document.getElementById('hero-title').innerHTML = "Let's <span class='text-red-800 italic font_title'>talk.</span>";
   document.getElementById('hero-sub').textContent = "Whether you're looking for a consultation, a collaboration, or just want to say hello — I'm always open to meaningful conversations.";
 }
 
