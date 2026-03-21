@@ -82,13 +82,16 @@
   cursor: pointer;
   padding: 0 4px;
 }
+.page-nav:hover { color: #1a1a1a; }
+.page-nav.disabled { opacity: 0.3; pointer-events: none; }
 
-.page-nav:hover {
-  color: #1a1a1a;
+.label-line::before,
+.label-line::after {
+  content: '';
+  display: inline-block;
+  width: 40px;
+  height: 2px;
+  background: #b91c1c;
+  vertical-align: middle;
+  margin: 0 12px;
 }
-
-.page-nav.disabled {
-  opacity: 0.3;
-  pointer-events: none;
-}
-
