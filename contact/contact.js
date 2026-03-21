@@ -1,10 +1,11 @@
 const contactData = {
   card: {
-    title: "Let's <em>talk.</em>",
-    sub: "Whether you're looking for a consultation, a co-authoring opportunity, or just want to say hello — I'm always open.",
+    title: "Teaching, research, and building",
+    sub: "Let\'s create something together.",
   },
+  
   infos: [
-    { icon: 'fa-solid fa-envelope', text: 'tokimahery@example.com', href: 'mailto:tokimahery@example.com' },
+    { icon: 'fa-solid fa-envelope', text: 'tokimahery@gmail.com', href: 'mailto:tokimahery@gmail.com' },
     { icon: 'fa-brands fa-linkedin', text: 'linkedin.com/in/tokimahery', href: 'https://linkedin.com' },
     { icon: 'fa-solid fa-location-dot', text: 'Antananarivo, Madagascar', href: null },
   ],
@@ -219,6 +220,12 @@ function fillFAQ() {
   });
 }
 
+function fillHero() {
+  document.getElementById('hero-title').innerHTML = "Let's <span class='text-red-800 italic' style=\"font-family:'Playfair Display',serif\">talk.</span>";
+  document.getElementById('hero-sub').textContent = "Whether you're looking for a consultation, a collaboration, or just want to say hello — I'm always open to meaningful conversations.";
+}
+
 fillAvailability();
 fillSocials();
 fillFAQ();
+fillHero();
