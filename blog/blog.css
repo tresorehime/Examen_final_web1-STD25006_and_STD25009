@@ -1,3 +1,20 @@
+:root {
+  --font-title: 'Playfair display';
+  --font-body: 'DM Sans';
+  --color-bg-warm: #f9f6f1;
+  --color-bg-white: #ffffff;
+  --color-red-hover: #7f1d1d;
+  --color-border: #e5e0d8;
+  --color-border-light: #f0ece4;
+  --color-red: #b91c1c;
+  --color-red-dark: #991b1b;
+  --color-red-hover: #7f1d1d;
+}
+
+.font_title{
+  font-family: var(--font-title);
+}
+
 .post-item {
   background: white;
   border-radius: 8px;
@@ -82,8 +99,15 @@
   cursor: pointer;
   padding: 0 4px;
 }
-.page-nav:hover { color: #1a1a1a; }
-.page-nav.disabled { opacity: 0.3; pointer-events: none; }
+
+.page-nav:hover {
+  color: #1a1a1a;
+}
+
+.page-nav.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
 
 .label-line::before,
 .label-line::after {
