@@ -11,21 +11,11 @@ function formatDate(date) {
 
 
 function fillHero() {
-  document.getElementById('hero-label').textContent = 'Academic Work';
-
   const title = document.getElementById('hero-title');
-  title.innerHTML = 'Research <em style="font-family:\'Playfair Display\',serif;font-style:italic;color:#b91c1c">papers</em>';
+  title.innerHTML = 'Research <span class="text-red-800 italic" style="font-family:\'Playfair Display\',serif">papers</span>';
 
   const sub = document.getElementById('hero-sub');
   sub.textContent = 'My academic work focuses on multi-agent systems and normative frameworks, exploring how autonomous agents coordinate through norms and social structures in complex, distributed environments.';
-
-  requestAnimationFrame(() => {
-    if (window.innerWidth >= 768) {
-      const targetWidth = title.offsetWidth + 60;
-      sub.style.width = targetWidth + 'px';
-      title.style.width = targetWidth + 'px';
-    }
-  });
 }
 
 

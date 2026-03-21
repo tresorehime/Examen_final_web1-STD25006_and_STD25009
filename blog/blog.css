@@ -95,3 +95,7 @@
   vertical-align: middle;
   margin: 0 12px;
 }
+
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+}
