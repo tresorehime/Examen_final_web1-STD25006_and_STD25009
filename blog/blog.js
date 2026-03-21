@@ -7,9 +7,8 @@ function formatDate(date) {
 
 
 function fillHero() {
-  document.getElementById('hero-label').textContent = 'Writing';
-  document.getElementById('hero-title').innerHTML = 'The <em style="font-family:\'Playfair Display\',serif;font-style:italic;color:#b91c1c">blog</em>';
-  document.getElementById('hero-sub').textContent = 'Thoughts on teaching, software engineering, languages, and everything in between.';
+  document.getElementById('hero-title').innerHTML = 'The <span class="text-red-800 italic" style="font-family:\'Playfair Display\',serif">blog</span>';
+  document.getElementById('hero-sub').innerHTML = '<em>Thoughts on teaching, software engineering, languages, and everything in between.</em>';
 }
 
 
