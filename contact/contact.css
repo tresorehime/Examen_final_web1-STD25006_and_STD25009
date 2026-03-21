@@ -13,7 +13,7 @@
 
 .contact-page {
   min-height: 90vh;
-  background: rgb(253 242 242);
+  background: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -61,7 +61,7 @@
 .contact-card-sub {
   font-family: 'Source Serif 4', serif;
   font-size: 0.82rem;
-  color: #fecaca;
+  color: white;
   line-height: 1.6;
   margin-bottom: 3rem;
 }
@@ -290,3 +290,8 @@
     text-align: center;
   }
 }
+
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+}
+
