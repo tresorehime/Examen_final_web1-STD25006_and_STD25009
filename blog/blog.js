@@ -146,11 +146,46 @@ function fillCTA() {
 }
 
 
+function initNewsletter() {
+  const block = document.querySelector('.sidebar-block:nth-child(2)');
+  if (!block) return;
+
+  const subscribed = localStorage.getItem('newsletter_subscribed');
+
+  if (subscribed) {
+    showSubscribedState(block);
+    return;
+  }
+
+  const btn = block.querySelector('button');
+  const input = block.querySelector('input[type="email"]');
+
+  if (btn && input) {
+    btn.addEventListener('click', () => {
+      if (!input.value || !input.value.includes('@')) return;
+      localStorage.setItem('newsletter_subscribed', 'true');
+      showSubscribedState(block);
+    });
+  }
+}
+
+function showSubscribedState(block) {
+  const label = block.querySelector('.sidebar-label');
+  block.innerHTML = '';
+  block.appendChild(label);
+
+  const msg = document.createElement('p');
+  msg.textContent = 'You are in, talk soon.';
+  msg.style.cssText = 'color:#b91c1c; font-style:italic; font-size:0.9rem; margin-top:0.5rem;';
+  block.appendChild(msg);
+}
+
 fillHero();
 renderPosts();
 fillArchives();
 fillNewsletter();
 fillYoutube();
 fillCTA();
+initNewsletter();
 
 
