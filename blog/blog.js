@@ -147,7 +147,7 @@ function fillCTA() {
 
 
 function initNewsletter() {
-  const block = document.querySelector('.sidebar-block:nth-child(2)');
+  const block = document.getElementById('newsletter_block');
   if (!block) return;
 
   const subscribed = localStorage.getItem('newsletter_subscribed');
