@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "tailwindcss -i ./src/input.css -o ./src/output.css --minify"
+    "build": "node ./node_modules/tailwindcss/lib/cli.js -i ./src/input.css -o ./src/output.css --minify"
   },
   "repository": {
     "type": "git",
