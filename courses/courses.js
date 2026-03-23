@@ -28,14 +28,27 @@ window.onload = function () {
                         <p class="card-desc">${c.description}</p>
                         <div class="card-actions">
                             <button class="btn-learn shadow-sm whitespace-nowrap"">Learn more</button>
-                            <button class="btn-cart  whitespace-nowrap"><i class="fa-solid fa-cart-shopping mr-1"></i>Add to cart</button>
+                            <button class="btn-cart whitespace-nowrap" data-id="${c.id}" data-title="${c.title}" data-price="${c.price}"></i>Add to cart</button>
                         </div>
                     </div>
                 </div>`;
         }).join('');
     }
     renderCards(data.courses);
-
+        document.getElementById('courses_grid').addEventListener('click', e => {
+    const btn = e.target.closest('.btn-cart');
+    if (!btn) return;
+    e.stopPropagation();
+    const course = {
+        id: parseInt(btn.dataset.id),
+        title: btn.dataset.title,
+        price: parseInt(btn.dataset.price)
+    };
+    const added = addToCart(course);
+    if (!added) {
+        showToast('This course is already in your cart.', 'error');
+    }
+});
     let activeLang = "";
 
     const flags = {
@@ -142,4 +155,26 @@ window.onload = function () {
         filterCoursesTech();
 
     });
+    
+    document.getElementById('filter_search').addEventListener('input', e => {
+        filterCoursesSearch(e.target.value);
+    });
+    
+    function filterCoursesSearch(keyword) {
+        const kw = keyword.toLowerCase().trim();
+        if (!kw) {
+            renderCards(data.courses);
+            return;
+        }
+        const filtered = data.courses.filter(c => {
+            return (
+                c.title.toLowerCase().includes(kw) ||
+                c.description.toLowerCase().includes(kw) ||
+                c.level.toLowerCase().includes(kw) ||
+                c.language.toLowerCase().includes(kw) ||
+                c.technologies.some(t => t.toLowerCase().includes(kw))
+            );
+        });
+        renderCards(filtered);
+    }
 }
