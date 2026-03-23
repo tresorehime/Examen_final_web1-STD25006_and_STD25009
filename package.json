@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
+    "build": "npx tailwindcss -i ./src/input.css -o ./src/output.css --minify"
   },
   "repository": {
     "type": "git",
@@ -11,5 +11,8 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^4.2.2"
+  }
 }
